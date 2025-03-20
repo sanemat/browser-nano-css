@@ -6,6 +6,7 @@
 - **Easy to Use**: Just add one CSS file from a CDN. No complicated setup.
 - **Customizable**: Change basic styles easily using CSS variables.
 - **Simple HTML**: Use basic HTML tags without adding many classes.
+- **Security-Focused**: Ensures integrity and trustworthiness of distributed files.
 
 ### Constraints
 - **Browser Compatibility**: Supports modern browsers:
@@ -21,10 +22,11 @@
 2. **Accessibility**: High contrast, readable font size, and screen reader compatibility.
 3. **Readability**: Clear font, appropriate line spacing, and length.
 4. **Performance**: Minimal styling, no heavy animations or images.
+5. **Security**: Ensuring integrity and protection against supply chain attacks.
 
 **Medium Priority**
-5. **Spacing**: Clear and balanced margins and padding, adaptable to mobile and desktop.
-6. **Intuitiveness**: Elements like buttons and links clearly identifiable and easy to interact with.
+6. **Spacing**: Clear and balanced margins and padding, adaptable to mobile and desktop.
+7. **Intuitiveness**: Elements like buttons and links clearly identifiable and easy to interact with.
 
 **Low Priority (Out of Scope)**
 - Complex animations or interactions
@@ -51,7 +53,6 @@ To enhance developer experience and provide clarity:
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
 }
-
 ```
 
 ### IDE Support Recommendation
