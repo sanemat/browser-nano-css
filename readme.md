@@ -48,3 +48,7 @@ Because of this, tools like **PurgeCSS or CSS tree-shaking may remove important 
 ## License
 
 This project is licensed under the MIT License.
+
+## Design
+
+[design doc](./design.md)
