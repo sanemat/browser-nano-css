@@ -4,7 +4,8 @@ tests/
 .github/
 .vscode/
 
+dist/.gitkeep
+
 # Ignore config files and scripts
 *.config.js
 *.test.js
-readme.md
