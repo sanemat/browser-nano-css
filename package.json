@@ -19,7 +19,10 @@
     "dist/checksums.sha256",
     "dist/checksums.sha384",
     "changelog.md",
-    "design.md"
+    "design.md",
+    "readme.md",
+    "package.json",
+    "LICENSE"
   ],
   "scripts": {
     "build": "npm run clean && npm run process-css",
