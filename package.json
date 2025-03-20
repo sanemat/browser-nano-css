@@ -4,9 +4,11 @@
   "description": "CSS template",
   "main": "dist/browser-nano.min.css",
   "files": [
-    "dist/"
+    "dist/browser-nano.min.css",
+    "dist/browser-nano.min.css.map"
   ],
   "scripts": {
+    "clean": "del-cli dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/sanemat/browser-nano-css/issues"
   },
-  "homepage": "https://github.com/sanemat/browser-nano-css#readme"
+  "homepage": "https://github.com/sanemat/browser-nano-css#readme",
+  "devDependencies": {
+    "del-cli": "^6.0.0"
+  }
 }
