@@ -8,8 +8,10 @@
     "dist/browser-nano.min.css.map"
   ],
   "scripts": {
+    "build": "npm run clean && npm run process-css",
     "clean": "del-cli dist/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/sanemat/browser-nano-css#readme",
   "devDependencies": {
-    "del-cli": "^6.0.0"
+    "cssnano": "^7.0.6",
+    "del-cli": "^6.0.0",
+    "postcss-cli": "^11.0.1"
   }
 }
