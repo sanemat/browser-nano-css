@@ -17,11 +17,14 @@
     "dist/browser-nano.min.css",
     "dist/browser-nano.min.css.map",
     "dist/checksums.sha256",
-    "dist/checksums.sha384"
+    "dist/checksums.sha384",
+    "changelog.md",
+    "design.md"
   ],
   "scripts": {
     "build": "npm run clean && npm run process-css",
     "postbuild": "npm run checksums",
+    "changelog": "conventional-changelog -p angular -i changelog.md -s",
     "checksums": "uname | grep -v 'MINGW' && sha256sum dist/*.css > dist/checksums.sha256 && openssl dgst -sha384 -binary dist/*.css | openssl base64 -A > dist/checksums.sha384 || exit 0",
     "clean": "del-cli dist/*",
     "format": "npm run prettier && npm run sort-package-json",
@@ -34,6 +37,7 @@
     "test": "npm run format:check"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^5.0.0",
     "cssnano": "^7.0.6",
     "del-cli": "^6.0.0",
     "postcss-cli": "^11.0.1",
