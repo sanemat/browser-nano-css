@@ -9,11 +9,11 @@
 7. `git fetch origin`
 8. `git checkout main`
 9. `git rebase origin/main`
-10. `npm run build`  **Important**
-10. `tig` to get latest commit
-11. `git tag v0.1.2 ec6e1f08c65e489b7a79e01597855ec218d1fe5e`
-12. `git push orgin v0.1.2`
-13. `npm publish`
+10. `npm run build` **Important**
+11. `tig` to get latest commit
+12. `git tag v0.1.2 ec6e1f08c65e489b7a79e01597855ec218d1fe5e`
+13. `git push orgin v0.1.2`
+14. `npm publish`
 
 # Auto
 
@@ -26,7 +26,7 @@
 7. `git fetch origin`
 8. `git checkout main`
 9. `git rebase origin/main`
-10. `npm run build`  **Important**
-10. `tig` to get latest commit
-11. `git tag v0.1.2 ec6e1f08c65e489b7a79e01597855ec218d1fe5e`
-12. `git push orgin v0.1.2`
+10. `npm run build` **Important**
+11. `tig` to get latest commit
+12. `git tag v0.1.2 ec6e1f08c65e489b7a79e01597855ec218d1fe5e`
+13. `git push orgin v0.1.2`
