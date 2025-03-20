@@ -15,7 +15,9 @@
   "main": "dist/browser-nano.min.css",
   "files": [
     "dist/browser-nano.min.css",
-    "dist/browser-nano.min.css.map"
+    "dist/browser-nano.min.css.map",
+    "dist/checksums.sha256",
+    "dist/checksums.sha384"
   ],
   "scripts": {
     "build": "npm run clean && npm run process-css",
