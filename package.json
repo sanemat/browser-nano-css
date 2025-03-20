@@ -15,10 +15,14 @@
   "main": "dist/browser-nano.min.css",
   "files": [
     "dist/browser-nano.min.css",
-    "dist/browser-nano.min.css.map"
+    "dist/browser-nano.min.css.map",
+    "dist/checksums.sha256",
+    "dist/checksums.sha384"
   ],
   "scripts": {
     "build": "npm run clean && npm run process-css",
+    "postbuild": "npm run checksums",
+    "checksums": "uname | grep -v 'MINGW' && sha256sum dist/*.css > dist/checksums.sha256 && openssl dgst -sha384 -binary dist/*.css | openssl base64 -A > dist/checksums.sha384 || exit 0",
     "clean": "del-cli dist/*",
     "format": "npm run prettier && npm run sort-package-json",
     "format:check": "npm run prettier:check && npm run sort-package-json:check",
