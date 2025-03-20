@@ -2,6 +2,16 @@
   "name": "browser-nano-css",
   "version": "0.1.0",
   "description": "CSS template",
+  "homepage": "https://github.com/sanemat/browser-nano-css#readme",
+  "bugs": {
+    "url": "https://github.com/sanemat/browser-nano-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanemat/browser-nano-css.git"
+  },
+  "license": "MIT",
+  "author": "Matt Murahashi Kenichi",
   "main": "dist/browser-nano.min.css",
   "files": [
     "dist/browser-nano.min.css",
@@ -10,22 +20,20 @@
   "scripts": {
     "build": "npm run clean && npm run process-css",
     "clean": "del-cli dist/*",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map"
+    "format": "npm run prettier && npm run sort-package-json",
+    "format:check": "npm run prettier:check && npm run sort-package-json:check",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map",
+    "sort-package-json": "sort-package-json",
+    "sort-package-json:check": "sort-package-json --check",
+    "test": "npm run format:check"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sanemat/browser-nano-css.git"
-  },
-  "author": "Matt Murahashi Kenichi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sanemat/browser-nano-css/issues"
-  },
-  "homepage": "https://github.com/sanemat/browser-nano-css#readme",
   "devDependencies": {
     "cssnano": "^7.0.6",
     "del-cli": "^6.0.0",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "prettier": "^3.5.3",
+    "sort-package-json": "^3.0.0"
   }
 }
