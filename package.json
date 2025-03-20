@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "CSS template",
   "main": "dist/browser-nano.min.css",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

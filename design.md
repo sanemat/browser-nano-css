@@ -1,6 +1,7 @@
 ## Browser Nano CSS Design Template
 
 ### Goals
+
 - **Mobile-first**: Looks good on phones and tablets first, then larger screens.
 - **Lightweight**: Very small file size, fast loading.
 - **Easy to Use**: Just add one CSS file from a CDN. No complicated setup.
@@ -9,6 +10,7 @@
 - **Security-Focused**: Ensures integrity and trustworthiness of distributed files.
 
 ### Constraints
+
 - **Browser Compatibility**: Supports modern browsers:
   - Mobile: iPhone Safari, Android Chrome, Android Firefox
   - Desktop: Chrome, Safari, Firefox
@@ -18,6 +20,7 @@
 ### Design Rule Priorities
 
 **High Priority**
+
 1. **Consistency**: Unified colors, spacing, and typography throughout.
 2. **Accessibility**: High contrast, readable font size, and screen reader compatibility.
 3. **Readability**: Clear font, appropriate line spacing, and length.
@@ -25,14 +28,17 @@
 5. **Security**: Ensuring integrity and protection against supply chain attacks.
 
 **Medium Priority**
+
 6. **Spacing**: Clear and balanced margins and padding, adaptable to mobile and desktop.
 7. **Intuitiveness**: Elements like buttons and links clearly identifiable and easy to interact with.
 
 **Low Priority (Out of Scope)**
+
 - Complex animations or interactions
 - Advanced UI components like modals, carousels, or dropdowns
 
 ### Out of Scope (Things We Will Not Do)
+
 - **Complex JavaScript**: No JavaScript included. Only HTML and CSS.
 - **Advanced Components**: No complex UI elements like modals, carousels, or dropdowns.
 - **Full CSS Reset**: Only minimal resets (box-sizing and margins/padding reset).
@@ -58,4 +64,3 @@ To enhance developer experience and provide clarity:
 ### IDE Support Recommendation
 
 Consider using built-in IDE features for CSS variable autocompletion in popular editors like VSCode, without requiring additional plugins.
-
