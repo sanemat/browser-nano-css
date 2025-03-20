@@ -1,0 +1,10 @@
+# Ignore source files not needed in the package
+src/
+tests/
+.github/
+.vscode/
+
+# Ignore config files and scripts
+*.config.js
+*.test.js
+readme.md

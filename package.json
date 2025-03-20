@@ -1,0 +1,19 @@
+{
+  "name": "browser-nano-css",
+  "version": "0.1.0",
+  "description": "CSS template",
+  "main": "dist/browser-nano.min.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanemat/browser-nano-css.git"
+  },
+  "author": "Matt Murahashi Kenichi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanemat/browser-nano-css/issues"
+  },
+  "homepage": "https://github.com/sanemat/browser-nano-css#readme"
+}
