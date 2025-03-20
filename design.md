@@ -16,6 +16,7 @@
   - Desktop: Chrome, Safari, Firefox
 - **Minimal CSS features**: Uses only standard, widely-supported CSS features (basic selectors, CSS variables, simple media queries).
 - **Size Limit**: Aims for less than 2KB compressed CSS size.
+- **Not Optimized for Unused CSS Removal**: `browser-nano-css` is not designed for automated CSS reduction tools like tree-shaking or content-based purging. Users should include the full CSS file to ensure proper styling.
 
 ### Design Rule Priorities
 
