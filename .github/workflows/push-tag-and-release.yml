@@ -24,12 +24,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+          tags: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
 
       - name: Get version from package.json
         id: get_version
@@ -37,7 +39,10 @@ jobs:
           VERSION=$(node -p "require('./package.json').version")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Check if version changed
+      - name: Fetch full history of main for version diff
+        run: git fetch origin main --depth=2
+
+      - name: Check if version changed compared to previous main
         id: check_version
         run: |
           PREV=$(git show HEAD^:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || echo "none"
