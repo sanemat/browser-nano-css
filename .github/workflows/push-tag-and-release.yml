@@ -1,5 +1,5 @@
 # .github/workflows/push-tag-and-release.yml
-name: Push Tag and Release
+name: Version Tag and Release
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  check-and-tag:
+  check-version-and-tag:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,7 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+          tags: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -37,10 +38,13 @@ jobs:
           VERSION=$(node -p "require('./package.json').version")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Check if version changed
+      - name: Fetch two latest commits from main for version diff
+        run: git fetch origin main --depth=2
+
+      - name: Check if version changed compared to previous main
         id: check_version
         run: |
-          PREV=$(git show HEAD^:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || echo "none"
+          PREV=$(git show origin/main~1:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || PREV=""
           CURR=${{ steps.get_version.outputs.version }}
           echo "Previous version: $PREV"
           echo "Current version: $CURR"
@@ -52,7 +56,7 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Fail if tag already exists
+      - name: Check for existing tag
         if: steps.check_version.outputs.changed == 'true'
         run: |
           TAG=v${{ steps.get_version.outputs.version }}
@@ -61,7 +65,7 @@ jobs:
             exit 1
           fi
 
-      - name: Create and push tag
+      - name: Create version tag and push
         if: steps.check_version.outputs.changed == 'true'
         run: |
           TAG=v${{ steps.get_version.outputs.version }}
@@ -71,10 +75,10 @@ jobs:
           git push origin $TAG
           echo "Tag $TAG created and pushed."
 
-  publish-release:
-    needs: check-and-tag
-    if: needs.check-and-tag.outputs.changed == 'true'
+  run-reusable-release:
+    needs: check-version-and-tag
+    if: needs.check-version-and-tag.outputs.changed == 'true'
     uses: ./.github/workflows/reusable-release.yml
     with:
-      tag: v${{ needs.check-and-tag.outputs.version }}
+      tag: v${{ needs.check-version-and-tag.outputs.version }}
     secrets: inherit
