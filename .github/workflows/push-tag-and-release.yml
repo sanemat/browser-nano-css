@@ -39,7 +39,7 @@ jobs:
           VERSION=$(node -p "require('./package.json').version")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Fetch full history of main for version diff
+      - name: Fetch two latest commits from main for version diff
         run: git fetch origin main --depth=2
 
       - name: Check if version changed compared to previous main
