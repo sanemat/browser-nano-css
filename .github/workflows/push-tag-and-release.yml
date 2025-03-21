@@ -7,6 +7,10 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+  id-token: write
+
 jobs:
   check-and-tag:
     runs-on: ubuntu-latest
