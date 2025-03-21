@@ -1,0 +1,75 @@
+# .github/workflows/push-tag-and-release.yml
+name: Push Tag and Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-and-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      changed: ${{ steps.check_version.outputs.changed }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Get version from package.json
+        id: get_version
+        run: |
+          echo "version=$(node -p \"require('./package.json').version\")" >> $GITHUB_OUTPUT
+
+      - name: Check if version changed
+        id: check_version
+        run: |
+          PREV=$(git show HEAD^:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || echo "none"
+          CURR=${{ steps.get_version.outputs.version }}
+          echo "Previous version: $PREV"
+          echo "Current version: $CURR"
+          if [ "$PREV" != "$CURR" ]; then
+            echo "Version changed."
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "No version change."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Fail if tag already exists
+        if: steps.check_version.outputs.changed == 'true'
+        run: |
+          TAG=v${{ steps.get_version.outputs.version }}
+          if git rev-parse $TAG >/dev/null 2>&1; then
+            echo "Tag $TAG already exists. Failing."
+            exit 1
+          fi
+
+      - name: Create and push tag
+        if: steps.check_version.outputs.changed == 'true'
+        run: |
+          TAG=v${{ steps.get_version.outputs.version }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag $TAG
+          git push origin $TAG
+          echo "Tag $TAG created and pushed."
+
+  publish-release:
+    needs: check-and-tag
+    if: needs.check-and-tag.outputs.changed == 'true'
+    uses: ./.github/workflows/reusable-release.yml
+    with:
+      tag: v${{ needs.check-and-tag.outputs.version }}
+    secrets: inherit
