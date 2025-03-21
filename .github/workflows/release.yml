@@ -23,6 +23,15 @@ jobs:
         run: |
           echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_OUTPUT
 
+      - name: Validate SemVer format (simple)
+        run: |
+          TAG="${{ steps.vars.outputs.tag }}"
+          if [[ ! "$TAG" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.\-]+)?$ ]]; then
+            echo "Invalid SemVer format: $TAG"
+            exit 1
+          fi
+          echo "Valid SemVer: $TAG"
+
       - name: Check out repository at the specified tag
         uses: actions/checkout@v4
         with:
