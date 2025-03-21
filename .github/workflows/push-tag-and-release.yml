@@ -1,5 +1,5 @@
 # .github/workflows/push-tag-and-release.yml
-name: Push Tag and Release
+name: Tag and Release on Main Push
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  check-and-tag:
+  check-version-and-tag:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -57,7 +57,7 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Fail if tag already exists
+      - name: Check for existing tag
         if: steps.check_version.outputs.changed == 'true'
         run: |
           TAG=v${{ steps.get_version.outputs.version }}
@@ -66,7 +66,7 @@ jobs:
             exit 1
           fi
 
-      - name: Create and push tag
+      - name: Create version tag and push
         if: steps.check_version.outputs.changed == 'true'
         run: |
           TAG=v${{ steps.get_version.outputs.version }}
@@ -76,10 +76,10 @@ jobs:
           git push origin $TAG
           echo "Tag $TAG created and pushed."
 
-  publish-release:
-    needs: check-and-tag
-    if: needs.check-and-tag.outputs.changed == 'true'
+  dispatch-release-workflow:
+    needs: check-version-and-tag
+    if: needs.check-version-and-tag.outputs.changed == 'true'
     uses: ./.github/workflows/reusable-release.yml
     with:
-      tag: v${{ needs.check-and-tag.outputs.version }}
+      tag: v${{ needs.check-version-and-tag.outputs.version }}
     secrets: inherit
