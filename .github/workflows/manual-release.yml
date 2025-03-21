@@ -1,0 +1,16 @@
+name: Manual Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to release (e.g., v1.2.3)"
+        required: true
+        type: string
+
+jobs:
+  manual-release:
+    uses: ./.github/workflows/reusable-release.yml
+    with:
+      tag: ${{ github.event.inputs.tag }}
+    secrets: inherit

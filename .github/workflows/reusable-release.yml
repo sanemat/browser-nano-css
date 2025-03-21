@@ -1,13 +1,10 @@
-name: Release to npm
+# .github/workflows/reusable-release.yml
+name: Release (reusable)
 
 on:
-  push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+*"
-  workflow_dispatch:
+  workflow_call:
     inputs:
       tag:
-        description: "Existing tag to release (e.g., v1.2.3 or v1.2.3-beta.1)"
         required: true
         type: string
 
@@ -17,15 +14,11 @@ jobs:
     permissions:
       contents: write
       id-token: write
-    steps:
-      - name: Determine tag
-        id: vars
-        run: |
-          echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_OUTPUT
 
+    steps:
       - name: Validate SemVer format (simple)
         env:
-          TAG: ${{ steps.vars.outputs.tag }}
+          TAG: ${{ inputs.tag }}
         run: |
           if [[ ! "$TAG" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.\-]+)?$ ]]; then
             echo "Invalid SemVer format: $TAG"
@@ -36,8 +29,8 @@ jobs:
       - name: Check out repository at the specified tag
         uses: actions/checkout@v4
         with:
-          ref: ${{ steps.vars.outputs.tag }}
-          fetch-depth: 0 # Important for tag-based checkout
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -53,24 +46,20 @@ jobs:
 
       - name: Publish to npm
         run: |
-          if [[ "${TAG}" == *-* ]]; then
-            # prerelease: contains a dash
+          if [[ "$TAG" == *-* ]]; then
             npm publish --provenance --access public --tag beta
           else
-            # regular release
             npm publish --provenance --access public
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          TAG: ${{ steps.vars.outputs.tag }}
+          TAG: ${{ inputs.tag }}
 
       - name: Upload prerelease artifacts to GitHub Releases
-        if: ${{ contains(env.TAG, '-') }}
+        if: ${{ contains(inputs.tag, '-') }}
         uses: softprops/action-gh-release@v2
-        env:
-          TAG: ${{ steps.vars.outputs.tag }}
         with:
-          tag_name: ${{ env.TAG }}
+          tag_name: ${{ inputs.tag }}
           prerelease: true
           files: |
             dist/*.css
@@ -79,12 +68,10 @@ jobs:
             dist/checksums.sha384
 
       - name: Upload stable artifacts to GitHub Releases
-        if: ${{ !contains(env.TAG, '-') }}
+        if: ${{ !contains(inputs.tag, '-') }}
         uses: softprops/action-gh-release@v2
-        env:
-          TAG: ${{ steps.vars.outputs.tag }}
         with:
-          tag_name: ${{ env.TAG }}
+          tag_name: ${{ inputs.tag }}
           files: |
             dist/*.css
             dist/*.css.map
