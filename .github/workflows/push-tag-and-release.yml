@@ -1,5 +1,5 @@
 # .github/workflows/push-tag-and-release.yml
-name: Tag and Release on Main Push
+name: Version Tag and Release
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
       - name: Check if version changed compared to previous main
         id: check_version
         run: |
-          PREV=$(git show HEAD^:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || echo "none"
+          PREV=$(git show origin/main~1:package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version") || PREV=""
           CURR=${{ steps.get_version.outputs.version }}
           echo "Previous version: $PREV"
           echo "Current version: $CURR"
@@ -76,7 +76,7 @@ jobs:
           git push origin $TAG
           echo "Tag $TAG created and pushed."
 
-  dispatch-release-workflow:
+  run-reusable-release:
     needs: check-version-and-tag
     if: needs.check-version-and-tag.outputs.changed == 'true'
     uses: ./.github/workflows/reusable-release.yml
