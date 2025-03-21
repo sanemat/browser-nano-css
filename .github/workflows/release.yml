@@ -24,8 +24,9 @@ jobs:
           echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_OUTPUT
 
       - name: Validate SemVer format (simple)
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
         run: |
-          TAG="${{ steps.vars.outputs.tag }}"
           if [[ ! "$TAG" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.\-]+)?$ ]]; then
             echo "Invalid SemVer format: $TAG"
             exit 1
