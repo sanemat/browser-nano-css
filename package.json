@@ -32,6 +32,7 @@
     "clean": "del-cli dist/*",
     "format": "npm run prettier && npm run sort-package-json",
     "format:check": "npm run prettier:check && npm run sort-package-json:check",
+    "git:tag": "git tag v$(node -p \"require('./package.json').version\")",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map",
