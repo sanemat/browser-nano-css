@@ -64,9 +64,27 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           TAG: ${{ steps.vars.outputs.tag }}
 
-      - name: Upload artifacts to GitHub Releases
+      - name: Upload prerelease artifacts to GitHub Releases
+        if: ${{ contains(env.TAG, '-') }}
         uses: softprops/action-gh-release@v2
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
         with:
+          tag_name: ${{ env.TAG }}
+          prerelease: true
+          files: |
+            dist/*.css
+            dist/*.css.map
+            dist/checksums.sha256
+            dist/checksums.sha384
+
+      - name: Upload stable artifacts to GitHub Releases
+        if: ${{ !contains(env.TAG, '-') }}
+        uses: softprops/action-gh-release@v2
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
+        with:
+          tag_name: ${{ env.TAG }}
           files: |
             dist/*.css
             dist/*.css.map
