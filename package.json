@@ -30,6 +30,7 @@
     "changelog": "conventional-changelog -p angular -i changelog.md -s",
     "checksums": "uname | grep -v 'MINGW' && sha256sum dist/*.css > dist/checksums.sha256 && openssl dgst -sha384 -binary dist/*.css | openssl base64 -A > dist/checksums.sha384 || exit 0",
     "clean": "del-cli dist/*",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "format": "npm run prettier && npm run sort-package-json",
     "format:check": "npm run prettier:check && npm run sort-package-json:check",
     "git:tag": "git tag v$(node -p \"require('./package.json').version\")",
@@ -43,6 +44,7 @@
     "watch": "postcss src/browser-nano.css -o dist/browser-nano.min.css --watch"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "conventional-changelog-cli": "^5.0.0",
     "cssnano": "^7.0.6",
     "del-cli": "^6.0.0",
