@@ -1,3 +1,7 @@
+/* =======================================
+   Reset
+   - Minimal reset for consistent layout
+======================================= */
 *,
 *::before,
 *::after {
@@ -6,14 +10,82 @@
   padding: 0;
 }
 
+/* =======================================
+   Design Tokens (Variables)
+   - Centralized and customizable settings
+======================================= */
 :root {
-  --font-family-base: system-ui, sans-serif;
+  /* Typography */
+  --font-family-base: system-ui, sans-serif; /* Modern system font stack */
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.5; /* Comfortable reading */
+
+  /* Colors */
+  --color-text: #333; /* High readability on white */
+  --color-background: #fff; /* Clean neutral background */
 }
 
+/* =======================================
+   Base Styles
+   - Apply variables and basic readability
+======================================= */
 body {
   font-family: var(--font-family-base);
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--color-text, #333); /* readable gray */
-  background-color: var(--color-background, #fff); /* clean background */
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
+
+/* =======================================
+   Layout (Optional)
+   - Containers, responsive spacing, grid
+======================================= */
+/*
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+*/
+
+/* =======================================
+   Components (Optional)
+   - Buttons, forms, tables, etc.
+======================================= */
+/*
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+}
+*/
+
+/* =======================================
+   Utilities (Optional)
+   - Small helper classes
+======================================= */
+/*
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+*/
+
+/* =======================================
+   Theme Support (Optional)
+   - Example: Dark Mode
+======================================= */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #eee;
+    --color-background: #121212;
+  }
+}
+*/
