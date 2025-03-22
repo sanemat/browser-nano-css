@@ -15,16 +15,21 @@ on:
         description: "Specify fetch-depth (default: 100)"
         required: false
         default: "100"
+      commit-sha:
+        description: "Optional: Git commit hash to bump from"
+        required: false
 
 jobs:
   bump-and-pr:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Checkout target commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: ${{ github.event.inputs.fetch-depth }}
           fetch-tags: true
+          ref: ${{ github.event.inputs.commit-sha != '' && github.event.inputs.commit-sha || 'main' }}
 
       - name: Set up Node.js
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
