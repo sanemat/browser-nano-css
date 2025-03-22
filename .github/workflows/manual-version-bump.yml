@@ -1,0 +1,75 @@
+name: Bump Version and Prepare Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump-type:
+        description: "Select which part of the version to increment"
+        required: true
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+      fetch-depth:
+        description: "Specify fetch-depth (default: 100)"
+        required: false
+        default: "100"
+
+jobs:
+  bump-and-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ github.event.inputs.fetch-depth }}
+          fetch-tags: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Bump package version (no tag)
+        run: npm version ${{ github.event.inputs.bump-type }} --no-git-tag-version
+
+      - name: Update changelog (conventional-changelog)
+        run: npm run changelog
+
+      - name: Set up Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "chore: bump version and update changelog" || echo "No changes to commit"
+
+      - name: Get version from package.json
+        id: get_version
+        run: |
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: bump version and update changelog"
+          title: "chore: bump version to v${{ steps.get_version.outputs.version }}"
+          body: |
+            This pull request was generated automatically.
+
+            ### Summary
+            - Bumps the version to **v${{ steps.get_version.outputs.version }}**
+            - Updates the `CHANGELOG.md` using conventional commits
+
+            ### Next Step
+            Once this PR is merged into `main`, the release workflow will detect the version change and automatically create a tag and publish a release.
+
+            _Triggered by GitHub Actions in response to manual version bump request._
+          branch: auto/bump-${{ github.run_id }}
+          base: main
