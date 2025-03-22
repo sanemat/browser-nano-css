@@ -14,6 +14,6 @@
 
 - Release from GitHub
 
-# 0.1.0 (2025-03-20)
+# [0.1.0](https://github.com/sanemat/browser-nano-css/compare/7d04a309f74cf7d8a753e20ef780e8bf9397fa04...v0.1.0) (2025-03-20)
 
 - Init project
