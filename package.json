@@ -36,9 +36,11 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map",
+    "serve": "serve .",
     "sort-package-json": "sort-package-json",
     "sort-package-json:check": "sort-package-json --check",
-    "test": "npm run format:check"
+    "test": "npm run format:check",
+    "watch": "postcss src/browser-nano.css -o dist/browser-nano.min.css --watch"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^5.0.0",
@@ -46,6 +48,7 @@
     "del-cli": "^6.0.0",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3",
+    "serve": "^14.2.4",
     "sort-package-json": "^3.0.0"
   }
 }

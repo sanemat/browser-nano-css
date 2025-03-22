@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Nano CSS — Modern Template</title>
+    <link rel="stylesheet" href="/dist/browser-nano.min.css" />
+    <meta
+      name="description"
+      content="A modern, semantic, mobile-first HTML5 template styled with browser-nano-css."
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <h1 id="welcome">Welcome to Browser Nano CSS</h1>
+      <p>A minimal, semantic HTML template powered by a 2KB CSS framework.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="features-heading">
+        <h2 id="features-heading">Core Features</h2>
+        <article>
+          <h3>Mobile-First Design</h3>
+          <p>
+            This template is optimized for smartphones and tablets first, then
+            gracefully scales up.
+          </p>
+        </article>
+        <article>
+          <h3>Semantic HTML</h3>
+          <p>
+            We use meaningful elements like <code>&lt;section&gt;</code>,
+            <code>&lt;article&gt;</code>, and <code>&lt;nav&gt;</code> to
+            improve structure and accessibility.
+          </p>
+        </article>
+        <article>
+          <h3>Customizable with CSS Variables</h3>
+          <p>
+            Change colors, spacing, and fonts via variables like
+            <code>--color-primary</code>.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Image Preview</h2>
+        <figure>
+          <img
+            src="/examples/640x360.svg"
+            alt="Placeholder preview"
+            width="640"
+            height="360"
+          />
+          <figcaption>A responsive image with caption.</figcaption>
+        </figure>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form method="POST" action="#">
+          <label for="name">Your Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Jane Doe"
+          />
+
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="jane@example.com"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Your message here..."
+          ></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small
+        >&copy; 2025 Browser Nano. Built with minimal CSS for maximum
+        clarity.</small
+      >
+    </footer>
+  </body>
+</html>
