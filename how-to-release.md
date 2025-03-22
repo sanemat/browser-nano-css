@@ -68,4 +68,3 @@
 
 Use this workflow to make a release:
 [manual-release.yml](https://github.com/sanemat/browser-nano-css/actions/workflows/manual-release.yml)
-
