@@ -2,6 +2,11 @@
   publish = "."
   command = "npm run build"
 
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_ENV = "production"
+  NPM_FLAGS = "--omit=dev"
+
 [[redirects]]
   from = "/"
   to = "/examples/index.html"
