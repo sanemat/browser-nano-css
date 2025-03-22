@@ -4,8 +4,6 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  NODE_ENV = "production"
-  NPM_FLAGS = "--omit=dev"
 
 [[redirects]]
   from = "/"
