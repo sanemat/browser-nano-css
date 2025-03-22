@@ -65,7 +65,7 @@ jobs:
 
             ### Summary
             - Bumps the version to **v${{ steps.get_version.outputs.version }}**
-            - Updates the `CHANGELOG.md` using conventional commits
+            - Updates the `changelog.md` using conventional commits
 
             ### Next Step
             Once this PR is merged into `main`, the release workflow will detect the version change and automatically create a tag and publish a release.
