@@ -53,6 +53,19 @@ body {
    Components (Optional)
    - Buttons, forms, tables, etc.
 ======================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold; /* Make all headings bold for consistency */
+  line-height: 1.25; /* Tighter line spacing for better structure */
+  margin-top: 1em; /* Add space above to separate from previous content */
+  margin-bottom: 0.5em; /* Add space below to separate from following content */
+}
+
 /*
 button {
   padding: 0.5rem 1rem;
