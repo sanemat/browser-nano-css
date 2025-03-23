@@ -1,12 +1,9 @@
 ## [0.1.7](https://github.com/sanemat/browser-nano-css/compare/v0.1.6...v0.1.7) (2025-03-23)
 
-
 ### Features
 
-* **components:** add heading styles ([c32ca19](https://github.com/sanemat/browser-nano-css/commit/c32ca1918b82a2c1b20bbd79bfd8ddf0bd077258)), closes [#43](https://github.com/sanemat/browser-nano-css/issues/43)
-* **components:** add margin-top ([4a3295f](https://github.com/sanemat/browser-nano-css/commit/4a3295f4ffae7f64dd2acc200432d08ebeb7d788))
-
-
+- **components:** add heading styles ([c32ca19](https://github.com/sanemat/browser-nano-css/commit/c32ca1918b82a2c1b20bbd79bfd8ddf0bd077258)), closes [#43](https://github.com/sanemat/browser-nano-css/issues/43)
+- **components:** add margin-top ([4a3295f](https://github.com/sanemat/browser-nano-css/commit/4a3295f4ffae7f64dd2acc200432d08ebeb7d788))
 
 ## [0.1.6](https://github.com/sanemat/browser-nano-css/compare/v0.1.5...v0.1.6) (2025-03-23)
 
