@@ -1,3 +1,5 @@
+# [0.2.0](https://github.com/sanemat/browser-nano-css/compare/v0.1.8...v0.2.0) (2025-03-23)
+
 ## [0.1.8](https://github.com/sanemat/browser-nano-css/compare/v0.1.7...v0.1.8) (2025-03-23)
 
 ### Features
