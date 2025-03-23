@@ -9,7 +9,7 @@ To keep things simple and consistent, we kindly ask you to follow the steps belo
 
 ### 💬 Before You Start
 
-We recommend opening an [issue](../../issues) before creating a pull request,  
+We recommend opening an [issue](https://github.com/sanemat/browser-nano-css/issues) before creating a pull request,  
 especially for new features or major changes.  
 This helps us stay on the same page and avoid unnecessary work.
 
