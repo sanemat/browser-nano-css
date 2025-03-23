@@ -2,7 +2,7 @@
 
 ## About
 
-🚧 I recommend to use [Pico CSS](https://picocss.com/) or [MVP.css](https://andybrewer.github.io/mvp/) for a while. 🚧
+🚧 This project is still in development. For now, you can try [Pico CSS](https://picocss.com/) or [MVP.css](https://andybrewer.github.io/mvp/). 🚧
 
 Browser Nano CSS is a lightweight, mobile-first CSS template. It provides simple and clean styles for default HTML elements without requiring extra classes or setup.
 
