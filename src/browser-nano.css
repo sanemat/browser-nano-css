@@ -5,9 +5,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Include padding and border in width/height */
+  margin: 0; /* Remove default outer space */
+  padding: 0; /* Remove default inner space */
 }
 
 /* =======================================
