@@ -49,6 +49,9 @@ jobs:
       - name: Update changelog (conventional-changelog)
         run: npm run changelog
 
+      - name: Format project
+        run: npm run format
+
       - name: Set up Git
         run: |
           git config user.name 'github-actions[bot]'
