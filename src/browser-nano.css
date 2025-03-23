@@ -35,6 +35,11 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-text);
   background-color: var(--color-background);
+
+  min-height: 100vh; /* Makes background color fill the screen */
+  word-break: break-word; /* Avoids layout issues with long words */
+  text-size-adjust: 100%; /* Stops mobile Safari from shrinking text */
+  margin: 0; /* Clear top-level reset, matches global reset */
 }
 
 /* =======================================
