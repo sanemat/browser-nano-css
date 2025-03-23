@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run process-css",
-    "postbuild": "npm run checksums",
+    "postbuild": "npm run checksums && npm run size:check",
     "changelog": "conventional-changelog -p angular -i changelog.md -s",
     "checksums": "uname | grep -v 'MINGW' && sha256sum dist/*.css > dist/checksums.sha256 && openssl dgst -sha384 -binary dist/*.css | openssl base64 -A > dist/checksums.sha384 || exit 0",
     "clean": "del-cli dist/*",
@@ -38,6 +38,8 @@
     "prettier:check": "prettier --check .",
     "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map",
     "serve": "serve .",
+    "size": "node tools/size.js show",
+    "size:check": "node tools/size.js check",
     "sort-package-json": "sort-package-json",
     "sort-package-json:check": "sort-package-json --check",
     "test": "npm run format:check",
