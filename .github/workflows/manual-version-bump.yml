@@ -79,6 +79,22 @@ jobs:
             - Bumps the version to **v${{ steps.get_version.outputs.version }}**
             - Updates the `changelog.md` using conventional commits
 
+            ### ⚠️ CI Notice
+            Due to GitHub Actions limitations, CI does **not run automatically** on this pull request.
+            Please manually trigger the CI workflow by following the link below:
+
+            👉 [Run CI manually](https://github.com/${{ github.repository }}/actions/workflows/ci.yml)
+
+            To run CI on this PR:
+
+            1. Copy and paste the following branch name into the input field:
+              ```
+              auto/bump-${{ github.run_id }}
+              ```
+            2. Click **"Run workflow"**
+
+            Once CI passes, feel free to review and merge this PR.
+
             ### Next Step
             Once this PR is merged into `main`, the release workflow will detect the version change and automatically create a tag and publish a release.
 
