@@ -60,9 +60,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold; /* Make all headings bold for emphasis */
+  font-weight: bold; /* Make all headings bold for consistency */
   line-height: 1.25; /* Tighter line spacing for better structure */
-  margin-bottom: 0.5em; /* Space below for clear content flow */
+  margin-top: 1em; /* Add space above to separate from previous content */
+  margin-bottom: 0.5em; /* Add space below to separate from following content */
 }
 
 /*
