@@ -20,18 +20,18 @@
 
 #### Design Philosophy
 
-- **Respect browser defaults, clarify intent**
-  We stay close to the browser’s native look and behavior.
-  This helps the design feel familiar, lightweight, and fast.
-  But when a default may cause confusion or break consistency,
-  we write it clearly to show the intent.
+- **Respect browser and OS defaults, clarify intent**
+  We stay close to the native look and behavior of modern browsers and devices.
+  This makes the design feel familiar, lightweight, and fast.
+  We allow natural differences between environments — for example, tap vs. click, or hover vs. no hover — because these match user expectations.
+  But when a default may cause confusion, reduce readability, or break layout consistency, we write it clearly to show the intent.
 
 - **Explicit over Implicit**
-  Important styles (like spacing, link visibility, or focus outline) are written explicitly.
+  Important styles (like spacing, link visibility, or focus outlines) are written explicitly.
   This helps with readability, consistent layout across browsers, and easier customization.
   Writing styles clearly also makes the CSS easier to understand and trust.
 
-> In short: we follow browser defaults where it makes sense, but we declare what matters.
+> In short: we follow browser defaults where it makes sense, allow natural differences across devices, and declare what truly matters.
 
 ### Design Rule Priorities
 
