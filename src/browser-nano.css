@@ -23,6 +23,7 @@
   /* Colors */
   --color-text: #333; /* High readability on white */
   --color-background: #fff; /* Clean neutral background */
+  --color-link: #0066ff; /* Clear and accessible link color */
 }
 
 /* =======================================
@@ -69,6 +70,17 @@ h6 {
   line-height: 1.25; /* Tighter line spacing for better structure */
   margin-top: 1em; /* Add space above to separate from previous content */
   margin-bottom: 0.5em; /* Add space below to separate from following content */
+}
+
+a {
+  color: var(--color-link); /* Clear and readable link color */
+  text-decoration: underline; /* Always underline: important for mobile and accessibility */
+  text-decoration-skip-ink: auto; /* Better looking underline */
+}
+
+a:focus {
+  outline: 2px solid currentColor; /* Show focus ring for keyboard users */
+  outline-offset: 2px; /* Better visibility, avoids overlap with underline */
 }
 
 /*
