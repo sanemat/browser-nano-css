@@ -1,3 +1,9 @@
+## [0.1.9](https://github.com/sanemat/browser-nano-css/compare/v0.1.8...v0.1.9) (2025-03-24)
+
+### Features
+
+- **component:** link style ([14965f9](https://github.com/sanemat/browser-nano-css/commit/14965f9ebdc748c09190a4d70a7f2c1d6fa489e0)), closes [#60](https://github.com/sanemat/browser-nano-css/issues/60)
+
 ## [0.1.8](https://github.com/sanemat/browser-nano-css/compare/v0.1.7...v0.1.8) (2025-03-23)
 
 ### Features
