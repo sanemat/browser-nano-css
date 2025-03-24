@@ -18,6 +18,21 @@
 - **Size Limit**: Aims for less than 2KB compressed CSS size.
 - **Not Optimized for Unused CSS Removal**: `browser-nano-css` is not designed for automated CSS reduction tools like tree-shaking or content-based purging. Users should include the full CSS file to ensure proper styling.
 
+#### Design Philosophy
+
+- **Respect browser defaults, clarify intent**
+  We stay close to the browser’s native look and behavior.
+  This helps the design feel familiar, lightweight, and fast.
+  But when a default may cause confusion or break consistency,
+  we write it clearly to show the intent.
+
+- **Explicit over Implicit**
+  Important styles (like spacing, link visibility, or focus outline) are written explicitly.
+  This helps with readability, consistent layout across browsers, and easier customization.
+  Writing styles clearly also makes the CSS easier to understand and trust.
+
+> In short: we follow browser defaults where it makes sense, but we declare what matters.
+
 ### Design Rule Priorities
 
 **High Priority**
