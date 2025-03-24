@@ -24,6 +24,10 @@
   --color-text: #333; /* High readability on white */
   --color-background: #fff; /* Clean neutral background */
   --color-link: #0066ff; /* Clear and accessible link color */
+
+  /* Spacing */
+  --spacing-small: 0.5rem; /* Used for buttons, small gaps */
+  --spacing-medium: 1rem; /* Default spacing between blocks */
 }
 
 /* =======================================
@@ -41,6 +45,12 @@ body {
   word-break: break-word; /* Avoids layout issues with long words */
   text-size-adjust: 100%; /* Stops mobile Safari from shrinking text */
   margin: 0; /* Clear top-level reset, matches global reset */
+}
+
+p,
+ul,
+ol {
+  margin-bottom: var(--spacing-medium); /* Clear space between content blocks */
 }
 
 /* =======================================
