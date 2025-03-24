@@ -2,23 +2,21 @@
 
 Thank you for your contribution!
 
-This project has a focused design and a clear direction.  
-To keep things simple and consistent, we kindly ask you to follow the steps below.
+This project has a focused design and clear direction.
+To keep things simple, consistent, and minimal, please follow the steps below.
 
 ---
 
 ### 💬 Before You Start
 
-We recommend opening an [issue](https://github.com/sanemat/browser-nano-css/issues) before creating a pull request,  
-especially for new features or major changes.  
-This helps us stay on the same page and avoid unnecessary work.
-
----
+We recommend opening an [issue](https://github.com/sanemat/browser-nano-css/issues)
+before making a pull request, especially for new features or bigger changes.
+This helps everyone stay aligned and avoid rework.
 
 ### 📝 Commit Message Style
 
 Please follow the [Conventional Commits](https://www.conventionalcommits.org/) format.  
-This makes it easier to generate changelogs and keep a clear project history.
+It keeps the project history clean and helps us generate changelogs automatically.
 
 **Examples:**
 
@@ -32,30 +30,32 @@ docs: update README with new usage example
 
 ### ✅ Checklist
 
-- [ ] I opened or checked a related issue first (for bigger changes)
+- [ ] I opened or reviewed a related issue (if the change is non-trivial)
 - [ ] My commit messages follow [Conventional Commits](https://www.conventionalcommits.org/)
-- [ ] The change is small and focused
-- [ ] It follows the project’s design goals:
+- [ ] The change is small and focused (one idea per PR)
+- [ ] The change follows the project’s core design goals:
   - Mobile-first
-  - Lightweight (under 2KB)
+  - Lightweight (under 2KB compressed)
   - Simple HTML and CSS (no JS)
-  - Easy to use and secure
+  - Secure and easy to use
+  - Follow browser defaults when possible
+  - Be **explicit over implicit** when necessary
 
 ---
 
 ### 🛠️ What did you change?
 
-<!-- Example: Adjusted spacing on buttons for small screens -->
+<!-- Example: Added margin-bottom to <p>, <ul>, and <ol> using --spacing-medium -->
 
 ### 🤔 Why did you make this change?
 
-<!-- Example: To improve readability and keep spacing consistent -->
+<!-- Example: To keep spacing between text blocks consistent across browsers -->
 
 ### 🧪 How did you test it?
 
-<!-- Example: Checked in Android Chrome and Firefox on desktop -->
+<!-- Example: Tested in Chrome, Firefox, and Safari on both desktop and mobile -->
 
 ---
 
 Thanks for helping us improve!  
-We value thoughtful, clean, and focused contributions.
+We welcome thoughtful, focused contributions that match the project’s vision.
