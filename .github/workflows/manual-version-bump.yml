@@ -73,32 +73,30 @@ jobs:
           commit-message: "chore: bump version and update changelog"
           title: "chore: bump version to v${{ steps.get_version.outputs.version }}"
           body: |
-            This pull request was generated automatically.
+            This pull request was created automatically.
 
             ### Summary
-            - Bumps the version to **v${{ steps.get_version.outputs.version }}**
+            - Updates the version to **v${{ steps.get_version.outputs.version }}**
             - Updates the `changelog.md` using conventional commits
 
             ### ⚠️ CI Notice
-            Due to limitations with `GITHUB_TOKEN`, CI checks will **not run automatically** on this pull request.
+            Due to limitations with `GITHUB_TOKEN`, CI checks may **not run for the first commit** in this pull request.
 
-            To run the CI workflow manually:
+            If you do not see any CI checks, please run them manually:
 
-            1. Copy the following branch name:
+            1. Copy this branch name:
               ```
               auto/bump-${{ github.run_id }}
               ```
-            2. Open the CI workflow page:
+            2. Go to the CI workflow page:
               👉 [Run CI manually](https://github.com/${{ github.repository }}/actions/workflows/ci.yml)
-            3. Leave **"Use workflow from:"** set to `main` (this refers to the workflow file itself, not the code being tested)
-            4. Paste the branch name into the input field
+            3. Keep **"Use workflow from:"** as `main`
+            4. Paste the branch name
             5. Click **"Run workflow"**
 
-            Once the CI passes, you can safely review and merge this pull request.
+            ### After Merge
+            When this pull request is merged into `main`, the release workflow will make a tag and publish a release automatically.
 
-            ### Next Step
-            After merging this PR into `main`, the release workflow will detect the version change, create a new tag, and publish a release automatically.
-
-            _Triggered by GitHub Actions in response to a manual version bump request._
+            _This PR was made by GitHub Actions "a manual version bump request."_
           branch: auto/bump-${{ github.run_id }}
           base: main
