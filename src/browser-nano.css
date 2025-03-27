@@ -20,14 +20,21 @@
   --font-size-base: 1rem; /* 16px */
   --line-height-base: 1.5; /* Comfortable reading */
 
-  /* Colors */
+  /* Colors: Base */
   --color-text: #333; /* High readability on white */
   --color-background: #fff; /* Clean neutral background */
   --color-link: #0066ff; /* Clear and accessible link color */
 
+  /* Colors: UI element */
+  --color-border: #ccc; /* Light border for inputs and form elements */
+  --color-focus-ring: var(--color-link); /* Used for :focus outline */
+
   /* Spacing */
   --spacing-small: 0.5rem; /* Used for buttons, small gaps */
   --spacing-medium: 1rem; /* Default spacing between blocks */
+
+  /* Radius */
+  --border-radius: 4px; /* Unified corner rounding for buttons and inputs */
 }
 
 /* =======================================
@@ -93,15 +100,63 @@ a:focus {
   outline-offset: 2px; /* Better visibility, avoids overlap with underline */
 }
 
-/*
-button {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-text);
-  color: var(--color-background);
-  border: none;
-  cursor: pointer;
+input,
+textarea,
+select {
+  font: inherit; /* Makes form elements visually match the rest of the UI */
+  color: inherit; /* Ensures consistent text color across components */
+  background-color: var(
+    --color-background
+  ); /* Keeps background aligned with site theme */
+  border: 1px solid var(--color-border); /* Adds a clear visual boundary without looking heavy */
+  border-radius: var(
+    --border-radius
+  ); /* Softens edges for a modern, friendly appearance */
+  padding: var(--spacing-small); /* Improves tap target size and readability */
+  width: 100%; /* Ensures mobile-first full-width inputs for better UX on small screens */
+  max-width: 100%; /* Prevents layout-breaking overflow in narrow containers */
+  box-sizing: border-box; /* Simplifies layout calculations and prevents unexpected sizing */
 }
-*/
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-focus-ring); /* Makes focus visible for keyboard and accessibility users */
+  outline-offset: 2px; /* Separates outline from content for better contrast and clarity */
+}
+
+label {
+  display: block; /* Makes layout predictable when stacking label + input */
+  margin-bottom: 0.25rem; /* Creates space between label and input for readability */
+  font-weight: bold; /* Helps users quickly scan and understand form structure */
+}
+
+fieldset {
+  border: none; /* Removes outdated browser styling that may clash with the design */
+  margin: 0 0 var(--spacing-medium) 0; /* Adds space between grouped sections */
+  padding: 0; /* Removes default spacing that is often inconsistent across browsers */
+}
+
+button {
+  font: inherit; /* Keeps buttons visually consistent with surrounding text */
+  padding: 0.5rem 1rem; /* Makes button easy to tap or click, especially on mobile */
+  background-color: var(
+    --color-text
+  ); /* Ensures strong contrast for accessibility */
+  color: var(
+    --color-background
+  ); /* Reuses background color token to keep the design balanced */
+  border: none; /* Removes native borders that can look inconsistent */
+  border-radius: var(
+    --border-radius
+  ); /* Matches form inputs and adds visual harmony */
+  cursor: pointer; /* Makes it clear that the button is clickable */
+}
+
+button:focus {
+  outline: 2px solid currentColor; /* Reuses text color to maintain visual connection */
+  outline-offset: 2px; /* Improves visibility of the focus ring without overlap */
+}
 
 /* =======================================
    Utilities (Optional)
