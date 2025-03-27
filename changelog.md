@@ -1,3 +1,9 @@
+# [0.2.0](https://github.com/sanemat/browser-nano-css/compare/v0.1.9...v0.2.0) (2025-03-27)
+
+### Features
+
+- **base:** add space for block ([bcfca9a](https://github.com/sanemat/browser-nano-css/commit/bcfca9a8d784e589fdee5b0a2b540bad7dd0dd0c)), closes [#68](https://github.com/sanemat/browser-nano-css/issues/68)
+
 ## [0.1.9](https://github.com/sanemat/browser-nano-css/compare/v0.1.8...v0.1.9) (2025-03-24)
 
 ### Features
