@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/sanemat/browser-nano-css/compare/v0.2.0...v0.3.0) (2025-03-28)
+
+### Features
+
+- **form:** add styles ([59b8716](https://github.com/sanemat/browser-nano-css/commit/59b87166f661669950403b20c8cc04b651472d10)), closes [#72](https://github.com/sanemat/browser-nano-css/issues/72)
+
 # [0.2.0](https://github.com/sanemat/browser-nano-css/compare/v0.1.9...v0.2.0) (2025-03-27)
 
 ### Features
