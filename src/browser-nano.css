@@ -139,7 +139,7 @@ fieldset {
 
 button {
   font: inherit; /* Keeps buttons visually consistent with surrounding text */
-  padding: 0.5rem 1rem; /* Makes button easy to tap or click, especially on mobile */
+  padding: var(--spacing-small) var(--spacing-medium); /* Makes button easy to tap or click, especially on mobile */
   background-color: var(
     --color-text
   ); /* Ensures strong contrast for accessibility */
