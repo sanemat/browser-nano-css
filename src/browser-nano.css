@@ -105,13 +105,9 @@ textarea,
 select {
   font: inherit; /* Makes form elements visually match the rest of the UI */
   color: inherit; /* Ensures consistent text color across components */
-  background-color: var(
-    --color-background
-  ); /* Keeps background aligned with site theme */
+  background-color: var(--color-background); /* Keeps background aligned with site theme */
   border: 1px solid var(--color-border); /* Adds a clear visual boundary without looking heavy */
-  border-radius: var(
-    --border-radius
-  ); /* Softens edges for a modern, friendly appearance */
+  border-radius: var(--border-radius); /* Softens edges for a modern, friendly appearance */
   padding: var(--spacing-small); /* Improves tap target size and readability */
   width: 100%; /* Ensures mobile-first full-width inputs for better UX on small screens */
   max-width: 100%; /* Prevents layout-breaking overflow in narrow containers */
@@ -140,16 +136,10 @@ fieldset {
 button {
   font: inherit; /* Keeps buttons visually consistent with surrounding text */
   padding: 0.5rem 1rem; /* Makes button easy to tap or click, especially on mobile */
-  background-color: var(
-    --color-text
-  ); /* Ensures strong contrast for accessibility */
-  color: var(
-    --color-background
-  ); /* Reuses background color token to keep the design balanced */
+  background-color: var(--color-text); /* Ensures strong contrast for accessibility */
+  color: var(--color-background); /* Reuses background color token to keep the design balanced */
   border: none; /* Removes native borders that can look inconsistent */
-  border-radius: var(
-    --border-radius
-  ); /* Matches form inputs and adds visual harmony */
+  border-radius: var(--border-radius); /* Matches form inputs and adds visual harmony */
   cursor: pointer; /* Makes it clear that the button is clickable */
 }
 
