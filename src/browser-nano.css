@@ -61,6 +61,22 @@ ol {
 }
 
 /* =======================================
+   Media and Figures
+   - Styling for images and captions
+======================================= */
+
+figure {
+  margin-bottom: var(--spacing-medium); /* Add space below the image block for better layout flow */
+}
+
+figcaption {
+  text-align: center; /* Center the caption under the image to improve readability */
+  font-size: 0.875rem; /* Make the caption text slightly smaller to show it's not main content */
+  color: var(--color-text); /* Use the same text color for consistency */
+  margin-top: var(--spacing-small); /* Add space between image and caption so they don't look crowded */
+}
+
+/* =======================================
    Components (Optional)
    - Buttons, forms, tables, etc.
 ======================================= */
