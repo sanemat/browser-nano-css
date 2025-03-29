@@ -169,7 +169,7 @@ button {
 }
 
 button:focus {
-  outline: 2px solid currentColor; /* Reuses text color to maintain visual connection */
+  outline: 2px solid var(--color-focus-ring); /* Use strong and consistent color for keyboard focus */
   outline-offset: 2px; /* Improves visibility of the focus ring without overlap */
 }
 
