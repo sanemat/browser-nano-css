@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/sanemat/browser-nano-css/compare/v0.4.0...v0.4.1) (2025-03-29)
+
+### Features
+
+- **base:** reset navigation lists ([719f3a8](https://github.com/sanemat/browser-nano-css/commit/719f3a8843d6ae64222ff4b37868a6e4519ddec7)), closes [#83](https://github.com/sanemat/browser-nano-css/issues/83)
+- **figure:** add style ([cd86c6f](https://github.com/sanemat/browser-nano-css/commit/cd86c6f33c863e2ca0d6f2a5cc7d1cff99610c46)), closes [#81](https://github.com/sanemat/browser-nano-css/issues/81)
+
 # [0.4.0](https://github.com/sanemat/browser-nano-css/compare/v0.3.0...v0.4.0) (2025-03-29)
 
 ### Features
