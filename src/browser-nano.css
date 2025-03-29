@@ -126,6 +126,10 @@ select {
   box-sizing: border-box; /* Simplifies layout calculations and prevents unexpected sizing */
 }
 
+textarea {
+  resize: vertical; /* Allow resizing up and down only, to keep layout clean */
+}
+
 input:focus,
 textarea:focus,
 select:focus {
