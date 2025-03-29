@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/sanemat/browser-nano-css/compare/v0.4.1...v0.5.0) (2025-03-29)
+
+### Bug Fixes
+
+- **button:** improve visibility ([52e5086](https://github.com/sanemat/browser-nano-css/commit/52e508698a90a4df6b09e690f4b9002dc7b61bca)), closes [#93](https://github.com/sanemat/browser-nano-css/issues/93)
+- **link:** improve visibility ([d0c242f](https://github.com/sanemat/browser-nano-css/commit/d0c242f0a39b9ec2db9022d3852c1cc8014b29d5)), closes [#94](https://github.com/sanemat/browser-nano-css/issues/94)
+
+### Features
+
+- **accessibility:** respect reduced motion ([2c82ef9](https://github.com/sanemat/browser-nano-css/commit/2c82ef96a921cb33a67d432389fa6af98c948144)), closes [#87](https://github.com/sanemat/browser-nano-css/issues/87)
+- **cls:** add cls protection styles ([563ae58](https://github.com/sanemat/browser-nano-css/commit/563ae589188ec1d169d36161329ced3d12504a3b)), closes [#90](https://github.com/sanemat/browser-nano-css/issues/90)
+- **legend:** add basic style ([9d95c22](https://github.com/sanemat/browser-nano-css/commit/9d95c2229a77fe6f89b9af44a8206c6e0cc48d69)), closes [#85](https://github.com/sanemat/browser-nano-css/issues/85)
+- **textarea:** resize ([e16536b](https://github.com/sanemat/browser-nano-css/commit/e16536b0b5950b3f812057274c87be3c9ffd65dc)), closes [#86](https://github.com/sanemat/browser-nano-css/issues/86)
+
 ## [0.4.1](https://github.com/sanemat/browser-nano-css/compare/v0.4.0...v0.4.1) (2025-03-29)
 
 ### Features
