@@ -149,6 +149,12 @@ fieldset {
   padding: 0; /* Removes default spacing that is often inconsistent across browsers */
 }
 
+legend {
+  font-weight: bold; /* Make the group title clear and readable */
+  margin-bottom: var(--spacing-small); /* Add space between the title and the form fields */
+  display: block; /* Prevent bugs in Safari and improve layout control */
+}
+
 button {
   font: inherit; /* Keeps buttons visually consistent with surrounding text */
   padding: var(--spacing-small) var(--spacing-medium); /* Makes button easy to tap or click, especially on mobile */
