@@ -124,6 +124,7 @@ select {
   width: 100%; /* Ensures mobile-first full-width inputs for better UX on small screens */
   max-width: 100%; /* Prevents layout-breaking overflow in narrow containers */
   box-sizing: border-box; /* Simplifies layout calculations and prevents unexpected sizing */
+  min-height: 2.5rem; /* Keep form element height stable to prevent CLS */
 }
 
 textarea {
@@ -153,6 +154,7 @@ legend {
   font-weight: bold; /* Make the group title clear and readable */
   margin-bottom: var(--spacing-small); /* Add space between the title and the form fields */
   display: block; /* Prevent bugs in Safari and improve layout control */
+  min-height: 1.5rem; /* Prevent layout shifts from inconsistent height */
 }
 
 button {
@@ -163,6 +165,7 @@ button {
   border: none; /* Removes native borders that can look inconsistent */
   border-radius: var(--border-radius); /* Matches form inputs and adds visual harmony */
   cursor: pointer; /* Makes it clear that the button is clickable */
+  min-height: 2.5rem; /* Prevent layout shifts when buttons change size */
 }
 
 button:focus {
@@ -215,6 +218,7 @@ video,
 table {
   max-width: 100%; /* Shrinks to fit the screen */
   height: auto; /* Keeps the original shape */
+  aspect-ratio: auto; /* Reserve space even when width/height is missing */
 }
 
 /* Flex layout: starts stacked, changes to row on wider screens */
