@@ -23,7 +23,7 @@
       <p>A minimal, semantic HTML template powered by a 2KB CSS framework.</p>
     </header>
 
-    <main>
+    <main role="main">
       <section aria-labelledby="features-heading">
         <h2 id="features-heading">Core Features</h2>
         <article>
@@ -57,7 +57,7 @@
             src="/examples/2499674-607d8b.svg"
             alt="Placeholder preview"
             width="160"
-            width="200"
+            height="200"
           />
           <figcaption>A responsive image with caption.</figcaption>
         </figure>
@@ -66,33 +66,37 @@
       <section id="contact">
         <h2>Contact Us</h2>
         <form method="POST" action="#">
-          <label for="name">Your Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            placeholder="Jane Doe"
-          />
+          <fieldset>
+            <legend>Contact Form</legend>
 
-          <label for="email">Email Address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder="jane@example.com"
-          />
+            <label for="name">Your Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              placeholder="Jane Doe"
+            />
 
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="Your message here..."
-          ></textarea>
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="jane@example.com"
+            />
 
-          <button type="submit">Send</button>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your message here..."
+            ></textarea>
+
+            <button type="submit">Send</button>
+          </fieldset>
         </form>
       </section>
     </main>
