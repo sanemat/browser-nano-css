@@ -108,7 +108,7 @@ a {
 }
 
 a:focus {
-  outline: 2px solid currentColor; /* Show focus ring for keyboard users */
+  outline: 2px solid var(--color-focus-ring); /* Use strong and consistent color for keyboard focus */
   outline-offset: 2px; /* Better visibility, avoids overlap with underline */
 }
 
