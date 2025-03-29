@@ -61,18 +61,6 @@ ol {
 }
 
 /* =======================================
-   Layout (Optional)
-   - Containers, responsive spacing, grid
-======================================= */
-/*
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-*/
-
-/* =======================================
    Components (Optional)
    - Buttons, forms, tables, etc.
 ======================================= */
@@ -174,3 +162,44 @@ button:focus {
   }
 }
 */
+
+/* =======================================
+   Responsive Core Styles
+   - Added for better use on all screen sizes
+======================================= */
+
+/* Container: main column with max width for big screens */
+.container {
+  max-width: 960px; /* Stops content from getting too wide */
+  margin: 0 auto; /* Centers the container */
+  padding: var(--spacing-medium); /* Adds space inside the container */
+}
+
+/* Make sure images, videos, and tables fit on small screens */
+img,
+video,
+table {
+  max-width: 100%; /* Shrinks to fit the screen */
+  height: auto; /* Keeps the original shape */
+}
+
+/* Flex layout: starts stacked, changes to row on wider screens */
+.flex {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items for small screens */
+  gap: var(--spacing-medium); /* Add space between items */
+}
+
+@media (min-width: 768px) {
+  /* On big screens, show items side by side */
+  .flex {
+    flex-direction: row;
+  }
+
+  :root {
+    --font-size-base: 1.125rem; /* Bigger text for easier reading */
+  }
+}
+
+/* Viewport meta tag (not CSS, but add this to HTML <head>) */
+/* <meta name="viewport" content="width=device-width, initial-scale=1"> */
