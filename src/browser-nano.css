@@ -225,5 +225,16 @@ table {
   }
 }
 
+/* =======================================
+   Accessibility Support
+   - Respect user preference for reduced motion
+======================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important; /* Turn off animations for users who prefer reduced motion */
+    transition: none !important; /* Turn off transitions to avoid motion effects */
+  }
+}
+
 /* Viewport meta tag (not CSS, but add this to HTML <head>) */
 /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
