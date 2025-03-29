@@ -60,6 +60,14 @@ ol {
   margin-bottom: var(--spacing-medium); /* Clear space between content blocks */
 }
 
+/* Navigation Lists
+   Reset <nav><ul> structure for clean menus */
+nav ul {
+  list-style: none; /* Remove bullets to make the nav menu look clean */
+  padding-left: 0; /* Remove default indent for lists */
+  margin-bottom: var(--spacing-medium); /* Add space below the nav */
+}
+
 /* =======================================
    Media and Figures
    - Styling for images and captions
