@@ -33,6 +33,15 @@
 
 > In short: we follow browser defaults where it makes sense, allow natural differences across devices, and declare what truly matters.
 
+- **Minimal Utility Classes**
+
+  We include almost no utility classes by default.
+  This is on purpose — to keep the CSS small, readable, and flexible.
+  Instead of learning many class names, users are encouraged to write their own CSS for layout and styling.
+
+  We only include structural helpers like `.container` and `.flex`,
+  and accessibility helpers like `.visually-hidden` and `.focusable:focus`.
+
 ### Design Rule Priorities
 
 **High Priority**
