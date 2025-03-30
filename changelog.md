@@ -2,7 +2,7 @@
 
 ### Features
 
-- **example:** use inline style ([a67241d](https://github.com/sanemat/browser-nano-css/commit/a67241d99245ffed2c5f858baa3f9c3488dcb6b5))
+- **design:** Add philosopy, Minimal Utility Classes
 
 # [0.5.0](https://github.com/sanemat/browser-nano-css/compare/v0.4.1...v0.5.0) (2025-03-29)
 
