@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 768px) {
-    .flex {
-      justify-content: center;
-    }
+  .flex {
+    justify-content: center;
+  }
 }
