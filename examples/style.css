@@ -1,3 +1,9 @@
 .text-center {
   text-align: center;
 }
+
+@media (min-width: 768px) {
+    .flex {
+      justify-content: center;
+    }
+}
