@@ -1,3 +1,9 @@
+# [0.6.0](https://github.com/sanemat/browser-nano-css/compare/v0.5.0...v0.6.0) (2025-03-30)
+
+### Features
+
+- **design:** Add philosopy, Minimal Utility Classes
+
 # [0.5.0](https://github.com/sanemat/browser-nano-css/compare/v0.4.1...v0.5.0) (2025-03-29)
 
 ### Bug Fixes
