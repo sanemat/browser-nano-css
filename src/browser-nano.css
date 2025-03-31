@@ -284,5 +284,23 @@ table {
   min-height: 48px;
 }
 
+/*
+  Skip link for keyboard users.
+  It helps skip repeated content and go directly to the main content.
+*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  padding: var(--spacing-small);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0; /* Show when focused */
+}
+
 /* Viewport meta tag (not CSS, but add this to HTML <head>) */
 /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
