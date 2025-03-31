@@ -238,8 +238,11 @@ table {
 
 /* =======================================
    Accessibility Helpers
-   - Structural utility classes for screen readers and keyboard users
 ======================================= */
+/*
+  Hides content visually but keeps it available for screen readers.
+  Use this class for accessibility, like skip links or hidden labels.
+*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -252,6 +255,10 @@ table {
   border: 0;
 }
 
+/*
+  When the user focuses the link (for example, by pressing Tab),
+  show the link so they can see and use it.
+*/
 .focusable:focus {
   position: static;
   width: auto;
