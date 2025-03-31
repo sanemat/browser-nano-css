@@ -1,3 +1,13 @@
+## [0.6.2](https://github.com/sanemat/browser-nano-css/compare/v0.6.1...v0.6.2) (2025-03-31)
+
+### Bug Fixes
+
+- **tap-target:** better mobile support ([cb4f2f2](https://github.com/sanemat/browser-nano-css/commit/cb4f2f214105984fa6eda967e0acbe5e3ba86c8a)), closes [#112](https://github.com/sanemat/browser-nano-css/issues/112)
+
+### Features
+
+- **helper:** add skip-link ([f03cd3d](https://github.com/sanemat/browser-nano-css/commit/f03cd3d57eae8f5605b63b94de366e58d9daf4a3)), closes [#108](https://github.com/sanemat/browser-nano-css/issues/108)
+
 ## [0.6.1](https://github.com/sanemat/browser-nano-css/compare/v0.6.0...v0.6.1) (2025-03-31)
 
 ### Features
