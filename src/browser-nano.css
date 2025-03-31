@@ -236,5 +236,33 @@ table {
   }
 }
 
+/* =======================================
+   Accessibility Helpers
+   - Structural utility classes for screen readers and keyboard users
+======================================= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
+  background: var(--color-text);
+  color: var(--color-background);
+  z-index: 1000;
+  text-decoration: none;
+}
+
 /* Viewport meta tag (not CSS, but add this to HTML <head>) */
 /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
