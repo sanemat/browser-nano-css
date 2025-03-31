@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/sanemat/browser-nano-css/compare/v0.6.0...v0.6.1) (2025-03-31)
+
+### Features
+
+- **accessibility:** add visually-hidden,focusable ([4cb094a](https://github.com/sanemat/browser-nano-css/commit/4cb094ab72c7c0a36200d9e1e3885eda643a35c9)), closes [#99](https://github.com/sanemat/browser-nano-css/issues/99)
+- **helper:** add tap-target for accessibility ([9eb3ef9](https://github.com/sanemat/browser-nano-css/commit/9eb3ef980ccb0f60d0c0de6e11535c2c1b554bbe)), closes [#103](https://github.com/sanemat/browser-nano-css/issues/103)
+
 # [0.6.0](https://github.com/sanemat/browser-nano-css/compare/v0.5.0...v0.6.0) (2025-03-30)
 
 ### Features
