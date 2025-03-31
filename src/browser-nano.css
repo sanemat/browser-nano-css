@@ -271,5 +271,18 @@ table {
   text-decoration: none;
 }
 
+/*
+  Makes a button or link easier to tap on touchscreens.
+  Keeps the content inside a minimum 48x48 pixel box.
+  Useful for icon links, buttons, or menu items.
+
+  Note: `.tap-target` only sets a minimum tap area.
+  If you want to center icons or text inside the area, you may combine it with `display: flex` or similar styles.
+*/
+.tap-target {
+  min-width: 48px;
+  min-height: 48px;
+}
+
 /* Viewport meta tag (not CSS, but add this to HTML <head>) */
 /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
