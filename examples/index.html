@@ -12,12 +12,14 @@
     />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Using custom .text-center class for demo purposes - not included in browser-nano-css -->
     <header class="text-center">
       <h1 id="welcome">Welcome to Browser Nano CSS</h1>
       <p>A minimal, semantic HTML template powered by a 2KB CSS framework.</p>
     </header>
 
-    <main class="container" role="main">
+    <main id="main" class="container" role="main">
       <section aria-labelledby="features">
         <h2 id="features">Core Features</h2>
         <article>
@@ -42,6 +44,16 @@
             <code>--color-primary</code>.
           </p>
         </article>
+        <article>
+          <h3>Accessibility Features</h3>
+          <p>
+            Built-in support for screen readers, keyboard navigation, and touch targets.
+            <span class="visually-hidden">This text is hidden visually but available to screen readers.</span>
+          </p>
+          <p>
+            <a href="#contact" class="tap-target">Large tap target link</a> for better mobile experience.
+          </p>
+        </article>
       </section>
 
       <section>
@@ -55,6 +67,19 @@
           />
           <figcaption>A responsive image with caption.</figcaption>
         </figure>
+      </section>
+
+      <section>
+        <h2>Navigation Example</h2>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        <p>Notice how the navigation list removes bullets and indentation automatically.</p>
       </section>
 
       <section id="contact">
@@ -90,11 +115,13 @@
             ></textarea>
 
             <button type="submit">Send</button>
+            <small>Tip: Use Tab to navigate through form fields and see focus indicators.</small>
           </fieldset>
         </form>
       </section>
     </main>
 
+    <!-- Using custom .text-center class for demo purposes - not included in browser-nano-css -->
     <footer class="text-center">
       <nav>
         <ul class="flex" aria-label="Footer navigation">
