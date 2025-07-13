@@ -59,3 +59,15 @@ The build process transforms `src/browser-nano.css` into `dist/browser-nano.min.
 - Uses only standard CSS features for broad browser support
 - Styles apply directly to HTML elements, not classes
 - Target browsers: Chrome, Safari, Firefox (desktop and mobile)
+
+## Development Workflow
+
+### Code Formatting
+
+After editing CSS or HTML files, always run formatting:
+
+```bash
+npm run format
+```
+
+This ensures consistent code style using Prettier and keeps package.json sorted.
