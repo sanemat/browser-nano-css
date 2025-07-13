@@ -1,7 +1,4 @@
 /* Custom example styles - not part of browser-nano-css */
-.text-center {
-  text-align: center;
-}
 
 @media (min-width: 768px) {
   .flex {
