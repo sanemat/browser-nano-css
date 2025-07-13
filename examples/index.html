@@ -113,6 +113,113 @@
               placeholder="jane@example.com"
             />
 
+            <label for="phone">Phone Number</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="+1-555-123-4567"
+            />
+
+            <label for="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="url"
+              placeholder="https://example.com"
+            />
+
+            <label for="age">Age</label>
+            <input
+              id="age"
+              name="age"
+              type="number"
+              min="1"
+              max="120"
+              placeholder="25"
+            />
+
+            <label for="birthdate">Birth Date</label>
+            <input
+              id="birthdate"
+              name="birthdate"
+              type="date"
+            />
+
+            <label for="appointment_time">Appointment Time</label>
+            <input
+              id="appointment_time"
+              name="appointment_time"
+              type="time"
+            />
+
+            <label for="meeting_datetime">Meeting Date & Time</label>
+            <input
+              id="meeting_datetime"
+              name="meeting_datetime"
+              type="datetime-local"
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="jp">Japan</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="au">Australia</option>
+            </select>
+
+            <fieldset>
+              <legend>Preferred Contact Method</legend>
+              <label>
+                <input type="radio" name="contact_method" value="email" required />
+                Email
+              </label>
+              <label>
+                <input type="radio" name="contact_method" value="phone" required />
+                Phone
+              </label>
+              <label>
+                <input type="radio" name="contact_method" value="mail" required />
+                Postal Mail
+              </label>
+            </fieldset>
+
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              placeholder="Enter your password"
+            />
+
+            <label for="confirm_password">Confirm Password</label>
+            <input
+              id="confirm_password"
+              name="confirm_password"
+              type="password"
+              required
+              placeholder="Confirm your password"
+            />
+
+            <fieldset>
+              <legend>Subscription Preferences</legend>
+              <label>
+                <input type="checkbox" name="newsletter" value="newsletter" />
+                Subscribe to newsletter
+              </label>
+              <label>
+                <input type="checkbox" name="updates" value="updates" />
+                Receive product updates
+              </label>
+              <label>
+                <input type="checkbox" name="terms" value="terms" required />
+                I agree to the terms and conditions
+              </label>
+            </fieldset>
+
             <label for="message">Message</label>
             <textarea
               id="message"
