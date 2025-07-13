@@ -76,13 +76,26 @@ To enhance developer experience and provide clarity:
 
 ```css
 :root {
-  /* Colors */
-  --color-primary: #0066ff;
-  --color-text: #333333;
+  /* Typography */
+  --font-family-base: system-ui, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+
+  /* Colors: Base */
+  --color-text: #333;
+  --color-background: #fff;
+  --color-link: #0066ff;
+
+  /* Colors: UI element */
+  --color-border: #ccc;
+  --color-focus-ring: var(--color-link);
 
   /* Spacing */
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
+
+  /* Radius */
+  --border-radius: 4px;
 }
 ```
 
