@@ -16,4 +16,4 @@ Thumbs.db
 .idea/
 
 # Claude Code files
-CLAUDE.md
+.claude/
