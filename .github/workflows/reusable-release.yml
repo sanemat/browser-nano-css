@@ -27,7 +27,7 @@ jobs:
           echo "Valid SemVer: $TAG"
 
       - name: Check out repository at the specified tag
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           ref: ${{ inputs.tag }}
           fetch-depth: 0
@@ -57,7 +57,7 @@ jobs:
 
       - name: Upload prerelease artifacts to GitHub Releases
         if: ${{ contains(inputs.tag, '-') }}
-        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         with:
           tag_name: ${{ inputs.tag }}
           prerelease: true
@@ -69,7 +69,7 @@ jobs:
 
       - name: Upload stable artifacts to GitHub Releases
         if: ${{ !contains(inputs.tag, '-') }}
-        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         with:
           tag_name: ${{ inputs.tag }}
           files: |
