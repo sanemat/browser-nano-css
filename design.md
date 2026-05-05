@@ -6,6 +6,8 @@
 
 One strong opinion: **readability on mobile**. We declare colors, font-size, and max-width explicitly — because "readable" is meaningless without owning it. Everything else: we trust the browser.
 
+"Trust the browser" applies only to properties we have not touched. Once we declare a property on an element, we own the consequences — including related properties the browser assumed about our value.
+
 Correct HTML is rewarded with good defaults. No classes needed.
 
 ---
