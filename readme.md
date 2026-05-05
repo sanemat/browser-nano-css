@@ -57,7 +57,7 @@ Override any variable in your own stylesheet:
 
 - Typography: `h1`–`h6`, `p`, `ul`, `ol`, `a`, `code`, `pre`, `blockquote`
 - Structure: `main`, `article`, `nav`
-- Forms: `button`, `input`, `select`, `textarea`, `label`, `fieldset`
+- Forms: `button`, `select`, `textarea`, `label`, `fieldset`
 - Table: `overflow-x: auto` for mobile scroll
 
 ## What does NOT get styled
