@@ -39,23 +39,24 @@ Five only. No more.
 
 ```css
 :root {
-  --bg: #fff;
-  --text: #000;
+  color-scheme: light dark;
+  --bg: light-dark(#fff, #000);
+  --text: light-dark(#000, #fff);
   --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
 }
 ```
 
-| Variable           | Default       | Purpose                        |
-| ------------------ | ------------- | ------------------------------ |
-| `--bg`             | `#fff`        | Background color               |
-| `--text`           | `#000`        | Text color                     |
-| `--accent`         | `var(--text)` | Links and interactive elements |
-| `--font-size-base` | `18px`        | Base font size                 |
-| `--max-width`      | `65ch`        | Max content width              |
+| Variable           | Default                  | Purpose                        |
+| ------------------ | ------------------------ | ------------------------------ |
+| `--bg`             | `light-dark(#fff, #000)` | Background color               |
+| `--text`           | `light-dark(#000, #fff)` | Text color                     |
+| `--accent`         | `var(--text)`            | Links and interactive elements |
+| `--font-size-base` | `18px`                   | Base font size                 |
+| `--max-width`      | `65ch`                   | Max content width              |
 
-Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
+Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` follows `--text` automatically. Users who override `--bg` or `--text` can also use `light-dark()` for their custom values.
 
 ---
 
@@ -63,31 +64,31 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ### Document structure
 
-| Element     | What we do                              |
-| ----------- | --------------------------------------- |
-| `<main>`    | `max-width: var(--max-width)`, centered |
-| `<article>` | `max-width: var(--max-width)`           |
-| `<nav>`     | Minimal spacing only                    |
+| Element     | What we do                                                      |
+| ----------- | --------------------------------------------------------------- |
+| `<main>`    | `max-width: var(--max-width)`, centered, `padding-inline: 1rem` |
+| `<article>` | `max-width: var(--max-width)`                                   |
+| `<nav>`     | Minimal spacing only                                            |
 
 ### Typography
 
-| Element               | What we do                                                       |
-| --------------------- | ---------------------------------------------------------------- |
-| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. Weight: browser default. |
-| `<p>`, `<ul>`, `<ol>` | Spacing, `line-height`                                           |
-| `<a>`                 | Underline. Color: `var(--accent)`                                |
-| `<code>`, `<pre>`     | Monospace, readable, no overflow                                 |
-| `<blockquote>`        | Left border, spacing                                             |
+| Element               | What we do                                                                                      |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. `margin-block: 1.5rem 0.5rem`. Weight: browser default. |
+| `<p>`, `<ul>`, `<ol>` | `margin-block-end: 1rem`. `line-height` inherited from `body`.                                  |
+| `<a>`                 | Underline. Color: `var(--accent)`                                                               |
+| `<code>`, `<pre>`     | Monospace, readable, no overflow                                                                |
+| `<blockquote>`        | Left border, spacing                                                                            |
 
 ### App UI
 
-| Element                             | What we do                                      |
-| ----------------------------------- | ----------------------------------------------- |
-| `<button>`                          | Touch-friendly padding, high contrast, cursor   |
-| `<input>`, `<select>`, `<textarea>` | Mobile-friendly sizing, border                  |
-| `<label>`                           | Display block, tap target                       |
-| `<fieldset>`                        | Grouping, border                                |
-| `<table>`                           | `overflow-x: auto` — fixes mobile overflow only |
+| Element                             | What we do                                                                                                                                     |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<button>`                          | Touch-friendly padding, high contrast, cursor, `font-size: var(--font-size-base)`                                                              |
+| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border, `font-size: var(--font-size-base)`                                                                                      |
+| `<label>`                           | Display block, tap target                                                                                                                      |
+| `<fieldset>`                        | Grouping, border                                                                                                                               |
+| `<table>`                           | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
 
 ---
 
@@ -111,7 +112,9 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ## Dark mode
 
-Automatic via `prefers-color-scheme: dark`. Swaps `--bg` and `--text`. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+Automatic via `color-scheme: light dark` and `light-dark()`. No `@media` block needed. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+
+Users who override `--bg` or `--text` can use `light-dark()` for their custom values to get the same automatic swap.
 
 ---
 

@@ -1,6 +1,7 @@
 :root {
-  --bg: #fff;
-  --text: #000;
+  color-scheme: light dark;
+  --bg: light-dark(#fff, #000);
+  --text: light-dark(#000, #fff);
   --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
@@ -123,4 +124,9 @@ label {
 fieldset {
   border: 1px solid var(--text);
   padding: 1rem;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
 }
