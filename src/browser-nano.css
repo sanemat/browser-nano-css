@@ -130,6 +130,8 @@ table {
   overflow-x: auto;
 }
 
+/* Hardcoded: CSS variables cannot self-reference, so --bg/#fff swap is not automatic.
+   If you override --bg or --text, add your own dark mode block. */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #000;

@@ -55,7 +55,7 @@ Five only. No more.
 | `--font-size-base` | `18px`        | Base font size                 |
 | `--max-width`      | `65ch`        | Max content width              |
 
-Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
+Dark mode hardcodes `--bg: #000` and `--text: #fff`. `--accent` follows `--text` automatically. **If you override `--bg` or `--text`, add your own dark mode rule** — we cannot swap your custom values automatically.
 
 ---
 
@@ -111,7 +111,9 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ## Dark mode
 
-Automatic via `prefers-color-scheme: dark`. Swaps `--bg` and `--text`. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+Automatic via `prefers-color-scheme: dark`. Hardcodes `--bg: #000` and `--text: #fff` — CSS variables cannot self-reference, so a true swap is not possible. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+
+> **Customization note:** If you override `--bg` or `--text` with custom colors, you must also add your own `@media (prefers-color-scheme: dark)` block to override them for dark mode.
 
 ---
 
