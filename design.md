@@ -84,11 +84,12 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` follows `--te
 
 | Element                             | What we do                                                                                                                                     |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<button>`                          | Touch-friendly padding, high contrast, cursor, `font-size: var(--font-size-base)`                                                              |
-| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border, `font-size: var(--font-size-base)`                                                                                      |
+| `<button>`                          | Touch-friendly padding, high contrast, cursor. `font: inherit` via reset.                                                                      |
+| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border. `font: inherit` via reset.                                                                                              |
 | `<label>`                           | Display block, tap target                                                                                                                      |
 | `<fieldset>`                        | Grouping, border                                                                                                                               |
 | `<table>`                           | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
+| Checkboxes, radios, range, progress | `accent-color: var(--accent)` on `:root` — no per-element rule needed                                                                          |
 
 ---
 
