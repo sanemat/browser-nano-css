@@ -5,6 +5,7 @@
   --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
+  accent-color: var(--accent);
 }
 
 *,
@@ -17,7 +18,7 @@ button,
 input,
 select,
 textarea {
-  font-size: inherit;
+  font: inherit;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
   margin: 0;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+:where(h1, h2, h3, h4, h5, h6) {
   margin-block: 1.5rem 0.5rem;
 }
 
@@ -91,8 +92,8 @@ nav {
 }
 
 button {
-  background-color: var(--text);
-  border: none;
+  background: var(--text);
+  border: 0;
   color: var(--bg);
   cursor: pointer;
   padding: 0.75rem 1.5rem;
@@ -101,7 +102,7 @@ button {
 input,
 select,
 textarea {
-  background-color: var(--bg);
+  background: var(--bg);
   border: 1px solid var(--text);
   color: var(--text);
   padding: 0.5rem;
