@@ -4,7 +4,7 @@
  *
  * Usage:
  *   node tools/size.js show           # Show gzipped size (default)
- *   node tools/size.js check          # Fail if gzipped size exceeds 2KB
+ *   node tools/size.js check          # Fail if gzipped size exceeds 999 bytes
  *   node tools/size.js help           # Show usage help
  *
  * This script reads `dist/browser-nano.min.css`, gzips it, and:
@@ -17,7 +17,7 @@ const zlib = require("zlib");
 const path = require("path");
 
 const filePath = path.resolve(__dirname, "../dist/browser-nano.min.css");
-const maxSize = 2048; // 2KB
+const maxSize = 999; // 999 bytes
 const mode = (process.argv[2] || "show").toLowerCase();
 
 function showHelp() {
@@ -26,7 +26,7 @@ function showHelp() {
 
 Usage:
   node tools/size.js show     Show gzipped size (default)
-  node tools/size.js check    Fail if gzipped size exceeds 2KB
+  node tools/size.js check    Fail if gzipped size exceeds 999 bytes
   node tools/size.js help     Show this help message
 `);
 }
