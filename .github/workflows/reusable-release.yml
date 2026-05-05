@@ -52,7 +52,6 @@ jobs:
             npm publish --provenance --access public
           fi
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           TAG: ${{ inputs.tag }}
 
       - name: Upload prerelease artifacts to GitHub Releases
