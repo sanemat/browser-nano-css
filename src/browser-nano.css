@@ -73,7 +73,7 @@ pre {
 
 blockquote {
   border-left: 4px solid currentColor;
-  margin-inline-start: 0;
+  margin-inline: 0;
   padding-inline-start: 1rem;
 }
 
