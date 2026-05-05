@@ -124,3 +124,15 @@ fieldset {
   border: 1px solid var(--text);
   padding: 1rem;
 }
+
+table {
+  display: block;
+  overflow-x: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --text: #fff;
+  }
+}
