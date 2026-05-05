@@ -80,3 +80,17 @@ blockquote {
   margin-inline-start: 0;
   padding-inline-start: 1rem;
 }
+
+main {
+  margin-inline: auto;
+  max-width: var(--max-width);
+  padding-inline: 1rem;
+}
+
+article {
+  max-width: var(--max-width);
+}
+
+nav {
+  padding-block: 0.5rem;
+}
