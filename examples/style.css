@@ -1,6 +1,21 @@
 /* Custom example styles - not part of browser-nano-css */
 
-header,
-footer {
+body > header,
+body > footer {
   padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
+body > header nav ul,
+body > footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+body > footer {
+  border-block-start: 1px solid currentColor;
+  margin-block-start: 2rem;
 }
