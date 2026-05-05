@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-> Write correct HTML. Get a usable, readable screen on mobile. Handle your own layout. Under 2KB.
+> Write correct HTML. Get a usable, readable screen on mobile. Handle your own layout. Under 1024 bytes.
 
 One strong opinion: **readability on mobile**. We declare colors, font-size, and max-width explicitly — because "readable" is meaningless without owning it. Everything else: we trust the browser.
 
@@ -117,7 +117,7 @@ Automatic via `prefers-color-scheme: dark`. Swaps `--bg` and `--text`. `--accent
 
 ## Size constraint
 
-Under 2KB gzipped. Non-negotiable. If we exceed the limit, we cut features — we never raise the limit.
+Under 1024 bytes gzipped. Non-negotiable. If we exceed the limit, we cut features — we never raise the limit.
 
 ---
 
