@@ -6,6 +6,8 @@
 
 One strong opinion: **readability on mobile**. We declare colors, font-size, and max-width explicitly — because "readable" is meaningless without owning it. Everything else: we trust the browser.
 
+"Trust the browser" applies only to properties we have not touched. Once we declare a property on an element, we own the consequences — including related properties the browser assumed about our value.
+
 Correct HTML is rewarded with good defaults. No classes needed.
 
 ---
@@ -69,13 +71,13 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ### Typography
 
-| Element               | What we do                           |
-| --------------------- | ------------------------------------ |
-| `<h1>`–`<h6>`         | Size scale. Weight: browser default. |
-| `<p>`, `<ul>`, `<ol>` | Spacing, `line-height`               |
-| `<a>`                 | Underline. Color: `var(--accent)`    |
-| `<code>`, `<pre>`     | Monospace, readable, no overflow     |
-| `<blockquote>`        | Left border, spacing                 |
+| Element               | What we do                                                       |
+| --------------------- | ---------------------------------------------------------------- |
+| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. Weight: browser default. |
+| `<p>`, `<ul>`, `<ol>` | Spacing, `line-height`                                           |
+| `<a>`                 | Underline. Color: `var(--accent)`                                |
+| `<code>`, `<pre>`     | Monospace, readable, no overflow                                 |
+| `<blockquote>`        | Left border, spacing                                             |
 
 ### App UI
 
@@ -95,6 +97,7 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 - Base font-size: `18px` — 16px is too small on mobile
 - Line-height: `1.6` — readable on mobile
 - Font-weight: browser defaults only — we do not override `bold`
+- `h5`/`h6` floored at `1em` — smaller than body text breaks mobile readability
 
 ---
 
