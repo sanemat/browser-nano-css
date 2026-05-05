@@ -73,7 +73,7 @@ pre {
 
 blockquote {
   border-left: 4px solid currentColor;
-  margin-inline-start: 0;
+  margin-inline: 0;
   padding-inline-start: 1rem;
 }
 
@@ -99,7 +99,7 @@ button {
   padding: 0.75rem 1.5rem;
 }
 
-input,
+input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
   background: var(--bg);
