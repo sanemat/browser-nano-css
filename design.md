@@ -63,31 +63,31 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ### Document structure
 
-| Element     | What we do                              |
-| ----------- | --------------------------------------- |
-| `<main>`    | `max-width: var(--max-width)`, centered |
-| `<article>` | `max-width: var(--max-width)`           |
-| `<nav>`     | Minimal spacing only                    |
+| Element     | What we do                                                      |
+| ----------- | --------------------------------------------------------------- |
+| `<main>`    | `max-width: var(--max-width)`, centered, `padding-inline: 1rem` |
+| `<article>` | `max-width: var(--max-width)`                                   |
+| `<nav>`     | Minimal spacing only                                            |
 
 ### Typography
 
-| Element               | What we do                                                       |
-| --------------------- | ---------------------------------------------------------------- |
-| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. Weight: browser default. |
-| `<p>`, `<ul>`, `<ol>` | Spacing, `line-height`                                           |
-| `<a>`                 | Underline. Color: `var(--accent)`                                |
-| `<code>`, `<pre>`     | Monospace, readable, no overflow                                 |
-| `<blockquote>`        | Left border, spacing                                             |
+| Element               | What we do                                                                                      |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. `margin-block: 1.5rem 0.5rem`. Weight: browser default. |
+| `<p>`, `<ul>`, `<ol>` | `margin-block-end: 1rem`. `line-height` inherited from `body`.                                  |
+| `<a>`                 | Underline. Color: `var(--accent)`                                                               |
+| `<code>`, `<pre>`     | Monospace, readable, no overflow                                                                |
+| `<blockquote>`        | Left border, spacing                                                                            |
 
 ### App UI
 
-| Element                             | What we do                                      |
-| ----------------------------------- | ----------------------------------------------- |
-| `<button>`                          | Touch-friendly padding, high contrast, cursor   |
-| `<input>`, `<select>`, `<textarea>` | Mobile-friendly sizing, border                  |
-| `<label>`                           | Display block, tap target                       |
-| `<fieldset>`                        | Grouping, border                                |
-| `<table>`                           | `overflow-x: auto` — fixes mobile overflow only |
+| Element                             | What we do                                                                        |
+| ----------------------------------- | --------------------------------------------------------------------------------- |
+| `<button>`                          | Touch-friendly padding, high contrast, cursor, `font-size: var(--font-size-base)` |
+| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border, `font-size: var(--font-size-base)`                         |
+| `<label>`                           | Display block, tap target                                                         |
+| `<fieldset>`                        | Grouping, border                                                                  |
+| `<table>`                           | `overflow-x: auto` — fixes mobile overflow only                                   |
 
 ---
 
