@@ -1,21 +1,22 @@
 # Browser Nano CSS
 
-## About
+> Write correct HTML. Get a usable, readable screen on mobile. Handle your own layout. Under 2KB.
 
-🚧 This project is still in development. For now, you can try [Pico CSS](https://picocss.com/) or [MVP.css](https://andybrewer.github.io/mvp/). 🚧
-
-Browser Nano CSS is a lightweight, mobile-first CSS template. It provides simple and clean styles for default HTML elements without requiring extra classes or setup.
+Browser Nano CSS is a lightweight, mobile-first, classless CSS library. It styles standard HTML elements directly — no classes needed. Bold, high-contrast typography makes it readable in sunlight and accessible by default.
 
 ## Features
 
-- **Minimal and fast** – Small file size for quick loading.
-- **No dependencies** – Works with just a single CSS file.
-- **Customizable** – Uses CSS variables for easy styling.
+- **Classless** – No utility classes. Write semantic HTML and it looks good automatically.
+- **Bold/High-contrast** – Maximum contrast (WCAG AAA) for readability and accessibility.
+- **Structural HTML** – `<header>`, `<main>`, `<article>`, `<footer>` get meaningful styles based on their position in the document.
+- **Dark mode** – Automatic via `prefers-color-scheme`. No configuration needed.
+- **Under 2KB gzipped** – Fast loading, no dependencies.
+- **Customizable** – Uses CSS variables for easy overrides.
 - **Modern browser support** – Works in Chrome, Safari, Firefox, and mobile browsers.
 
 ## Installation
 
-### **Using a CDN**
+### Using a CDN
 
 Add this line to your HTML to use Browser Nano CSS:
 
@@ -26,7 +27,7 @@ Add this line to your HTML to use Browser Nano CSS:
 />
 ```
 
-### **Using npm**
+### Using npm
 
 Install with:
 
@@ -40,12 +41,44 @@ Then import it in your project:
 @import "browser-nano-css/dist/browser-nano.min.css";
 ```
 
+## Usage
+
+Just write correct, semantic HTML. No classes required:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="browser-nano.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Site</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Hello</h2>
+        <p>Write correct HTML. Get a readable page.</p>
+      </article>
+    </main>
+    <footer><p>&copy; 2025 My Site</p></footer>
+  </body>
+</html>
+```
+
 ## ❌ Not Compatible with CSS Optimization Tools
 
 Browser Nano CSS applies styles directly to HTML elements (e.g., `button {}` instead of `.btn {}`).
 Because of this, tools like **PurgeCSS or CSS tree-shaking may remove important styles** if used without proper configuration.
 
-📌 **Recommendation:** Include the full CSS file without using PurgeCSS or similar optimization tools. If you need tree-shaking support, consider another framework that relies on utility classes.
+📌 **Recommendation:** Include the full CSS file without using PurgeCSS or similar optimization tools.
 
 ## License
 
