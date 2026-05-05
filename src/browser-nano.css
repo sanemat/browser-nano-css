@@ -13,6 +13,13 @@
   box-sizing: border-box;
 }
 
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -22,12 +29,7 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
   margin-block: 1.5rem 0.5rem;
 }
 
@@ -43,15 +45,7 @@ h3 {
   font-size: 1.25em;
 }
 
-h4 {
-  font-size: 1em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
+:is(h4, h5, h6) {
   font-size: 1em;
 }
 
@@ -101,7 +95,6 @@ button {
   border: none;
   color: var(--bg);
   cursor: pointer;
-  font-size: var(--font-size-base);
   padding: 0.75rem 1.5rem;
 }
 
@@ -111,7 +104,6 @@ textarea {
   background-color: var(--bg);
   border: 1px solid var(--text);
   color: var(--text);
-  font-size: var(--font-size-base);
   padding: 0.5rem;
   width: 100%;
 }
