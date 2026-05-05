@@ -42,21 +42,21 @@ Five only. No more.
   color-scheme: light dark;
   --bg: light-dark(#fff, #000);
   --text: light-dark(#000, #fff);
-  --accent: var(--text);
+  --accent: light-dark(#0645d2, #8ab4f8);
   --font-size-base: 18px;
   --max-width: 65ch;
 }
 ```
 
-| Variable           | Default                  | Purpose                        |
-| ------------------ | ------------------------ | ------------------------------ |
-| `--bg`             | `light-dark(#fff, #000)` | Background color               |
-| `--text`           | `light-dark(#000, #fff)` | Text color                     |
-| `--accent`         | `var(--text)`            | Links and interactive elements |
-| `--font-size-base` | `18px`                   | Base font size                 |
-| `--max-width`      | `65ch`                   | Max content width              |
+| Variable           | Default                        | Purpose                        |
+| ------------------ | ------------------------------ | ------------------------------ |
+| `--bg`             | `light-dark(#fff, #000)`       | Background color               |
+| `--text`           | `light-dark(#000, #fff)`       | Text color                     |
+| `--accent`         | `light-dark(#0645d2, #8ab4f8)` | Links and interactive elements |
+| `--font-size-base` | `18px`                         | Base font size                 |
+| `--max-width`      | `65ch`                         | Max content width              |
 
-Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` follows `--text` automatically. Users who override `--bg` or `--text` can also use `light-dark()` for their custom values.
+Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in light mode and a lighter blue in dark mode, both meeting WCAG AAA contrast. Visited links use a hardcoded purple (`light-dark(#551a8b, #c58af9)`) — no variable, override with `a:visited { color: ... }` if needed.
 
 ---
 
@@ -113,9 +113,9 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` follows `--te
 
 ## Dark mode
 
-Automatic via `color-scheme: light dark` and `light-dark()`. No `@media` block needed. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+Automatic via `color-scheme: light dark` and `light-dark()`. No `@media` block needed. No opt-in needed.
 
-Users who override `--bg` or `--text` can use `light-dark()` for their custom values to get the same automatic swap.
+Users who override any variable can use `light-dark()` for their custom values to get the same automatic swap.
 
 ---
 
