@@ -39,21 +39,21 @@ Five only. No more.
 :root {
   --bg: #fff;
   --text: #000;
-  --accent: #000;
+  --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
 }
 ```
 
-| Variable           | Default | Purpose                        |
-| ------------------ | ------- | ------------------------------ |
-| `--bg`             | `#fff`  | Background color               |
-| `--text`           | `#000`  | Text color                     |
-| `--accent`         | `#000`  | Links and interactive elements |
-| `--font-size-base` | `18px`  | Base font size                 |
-| `--max-width`      | `65ch`  | Max content width              |
+| Variable           | Default        | Purpose                        |
+| ------------------ | -------------- | ------------------------------ |
+| `--bg`             | `#fff`         | Background color               |
+| `--text`           | `#000`         | Text color                     |
+| `--accent`         | `var(--text)`  | Links and interactive elements |
+| `--font-size-base` | `18px`         | Base font size                 |
+| `--max-width`      | `65ch`         | Max content width              |
 
-Dark mode swaps `--bg` and `--text`. That is all.
+Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ---
 
@@ -108,7 +108,7 @@ Dark mode swaps `--bg` and `--text`. That is all.
 
 ## Dark mode
 
-Automatic via `prefers-color-scheme: dark`. Swaps `--bg` and `--text`. No opt-in needed.
+Automatic via `prefers-color-scheme: dark`. Swaps `--bg` and `--text`. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
 
 ---
 
