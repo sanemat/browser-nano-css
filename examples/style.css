@@ -1,1 +1,6 @@
 /* Custom example styles - not part of browser-nano-css */
+
+header,
+footer {
+  padding-inline: 1rem;
+}
