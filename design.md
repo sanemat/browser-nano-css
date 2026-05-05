@@ -81,13 +81,13 @@ Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
 ### App UI
 
-| Element                             | What we do                                                                        |
-| ----------------------------------- | --------------------------------------------------------------------------------- |
-| `<button>`                          | Touch-friendly padding, high contrast, cursor, `font-size: var(--font-size-base)` |
-| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border, `font-size: var(--font-size-base)`                         |
-| `<label>`                           | Display block, tap target                                                         |
-| `<fieldset>`                        | Grouping, border                                                                  |
-| `<table>`                           | `overflow-x: auto` — fixes mobile overflow only                                   |
+| Element                             | What we do                                                                                                                                     |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<button>`                          | Touch-friendly padding, high contrast, cursor, `font-size: var(--font-size-base)`                                                              |
+| `<input>`, `<select>`, `<textarea>` | `width: 100%`, border, `font-size: var(--font-size-base)`                                                                                      |
+| `<label>`                           | Display block, tap target                                                                                                                      |
+| `<fieldset>`                        | Grouping, border                                                                                                                               |
+| `<table>`                           | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
 
 ---
 
