@@ -1,6 +1,7 @@
 :root {
-  --bg: #fff;
-  --text: #000;
+  color-scheme: light dark;
+  --bg: light-dark(#fff, #000);
+  --text: light-dark(#000, #fff);
   --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
@@ -128,13 +129,4 @@ fieldset {
 table {
   display: block;
   overflow-x: auto;
-}
-
-/* Hardcoded: CSS variables cannot self-reference, so --bg/#fff swap is not automatic.
-   If you override --bg or --text, add your own dark mode block. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000;
-    --text: #fff;
-  }
 }

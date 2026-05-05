@@ -39,23 +39,24 @@ Five only. No more.
 
 ```css
 :root {
-  --bg: #fff;
-  --text: #000;
+  color-scheme: light dark;
+  --bg: light-dark(#fff, #000);
+  --text: light-dark(#000, #fff);
   --accent: var(--text);
   --font-size-base: 18px;
   --max-width: 65ch;
 }
 ```
 
-| Variable           | Default       | Purpose                        |
-| ------------------ | ------------- | ------------------------------ |
-| `--bg`             | `#fff`        | Background color               |
-| `--text`           | `#000`        | Text color                     |
-| `--accent`         | `var(--text)` | Links and interactive elements |
-| `--font-size-base` | `18px`        | Base font size                 |
-| `--max-width`      | `65ch`        | Max content width              |
+| Variable           | Default                  | Purpose                        |
+| ------------------ | ------------------------ | ------------------------------ |
+| `--bg`             | `light-dark(#fff, #000)` | Background color               |
+| `--text`           | `light-dark(#000, #fff)` | Text color                     |
+| `--accent`         | `var(--text)`            | Links and interactive elements |
+| `--font-size-base` | `18px`                   | Base font size                 |
+| `--max-width`      | `65ch`                   | Max content width              |
 
-Dark mode hardcodes `--bg: #000` and `--text: #fff`. `--accent` follows `--text` automatically. **If you override `--bg` or `--text`, add your own dark mode rule** — we cannot swap your custom values automatically.
+Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` follows `--text` automatically. Users who override `--bg` or `--text` can also use `light-dark()` for their custom values.
 
 ---
 
@@ -111,9 +112,9 @@ Dark mode hardcodes `--bg: #000` and `--text: #fff`. `--accent` follows `--text`
 
 ## Dark mode
 
-Automatic via `prefers-color-scheme: dark`. Hardcodes `--bg: #000` and `--text: #fff` — CSS variables cannot self-reference, so a true swap is not possible. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
+Automatic via `color-scheme: light dark` and `light-dark()`. No `@media` block needed. `--accent` follows `--text` automatically — no extra rule needed. No opt-in needed.
 
-> **Customization note:** If you override `--bg` or `--text` with custom colors, you must also add your own `@media (prefers-color-scheme: dark)` block to override them for dark mode.
+Users who override `--bg` or `--text` can use `light-dark()` for their custom values to get the same automatic swap.
 
 ---
 
