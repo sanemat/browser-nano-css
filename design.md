@@ -45,13 +45,13 @@ Five only. No more.
 }
 ```
 
-| Variable           | Default        | Purpose                        |
-| ------------------ | -------------- | ------------------------------ |
-| `--bg`             | `#fff`         | Background color               |
-| `--text`           | `#000`         | Text color                     |
-| `--accent`         | `var(--text)`  | Links and interactive elements |
-| `--font-size-base` | `18px`         | Base font size                 |
-| `--max-width`      | `65ch`         | Max content width              |
+| Variable           | Default       | Purpose                        |
+| ------------------ | ------------- | ------------------------------ |
+| `--bg`             | `#fff`        | Background color               |
+| `--text`           | `#000`        | Text color                     |
+| `--accent`         | `var(--text)` | Links and interactive elements |
+| `--font-size-base` | `18px`        | Base font size                 |
+| `--max-width`      | `65ch`        | Max content width              |
 
 Dark mode swaps `--bg` and `--text`. `--accent` follows `--text` automatically.
 
