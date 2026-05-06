@@ -1,8 +1,8 @@
-# Unreleased
+## [2.1.1](https://github.com/sanemat/browser-nano-css/compare/v2.1.0...v2.1.1) (2026-05-06)
 
 ### Chores
 
-- change license from MIT to MIT-0 (no attribution required)
+- change license from MIT to MIT-0 (no attribution required) ([fab6fb1](https://github.com/sanemat/browser-nano-css/commit/fab6fb1))
 
 # [2.1.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0...v2.1.0) (2026-05-06)
 

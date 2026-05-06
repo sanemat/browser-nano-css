@@ -80,7 +80,7 @@ Styles apply directly to HTML elements (`button {}`, not `.btn {}`). PurgeCSS an
 
 ## License
 
-MIT
+MIT-0
 
 ## Design
 
