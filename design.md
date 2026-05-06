@@ -83,16 +83,16 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 
 ### App UI
 
-| Element                                                 | What we do                                                                                                                                     |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<button>`                                              | Touch-friendly padding, high contrast, cursor. `font: inherit` via reset.                                                                      |
-| `<input>` (text-like types)                             | `width: 100%`, border, theme colors. Types: `text`, `email`, `password`, `search`, `url`, `tel`, `number`, no-type. `font: inherit` via reset. |
-| `<select>`, `<textarea>`                                | `width: 100%`, border, theme colors. `font: inherit` via reset.                                                                                |
-| `<label>`                                               | Display block, tap target                                                                                                                      |
-| `<fieldset>`                                            | Grouping, border                                                                                                                               |
-| `<table>`                                               | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
-| Checkboxes, radios, range, progress                     | `accent-color: var(--accent)` on `:root` — no per-element rule needed                                                                          |
-| `:is(a, button, input, select, textarea):focus-visible` | `outline: 2px solid var(--accent); outline-offset: 2px` — keyboard focus indicator                                                             |
+| Element                                                    | What we do                                                                                                                                     |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<button>`                                                 | Touch-friendly padding, high contrast, cursor. `font: inherit` via reset.                                                                      |
+| `<input>` (text-like types)                                | `width: 100%`, border, theme colors. Types: `text`, `email`, `password`, `search`, `url`, `tel`, `number`, no-type. `font: inherit` via reset. |
+| `<select>`, `<textarea>`                                   | `width: 100%`, border, theme colors. `font: inherit` via reset.                                                                                |
+| `<label>`                                                  | Display block, tap target                                                                                                                      |
+| `<fieldset>`                                               | Grouping, border                                                                                                                               |
+| `<table>`                                                  | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
+| Checkboxes, radios, range, progress                        | `accent-color: var(--accent)` on `:root` — no per-element rule needed                                                                          |
+| `:where(a, button, input, select, textarea):focus-visible` | `outline: 2px solid var(--accent); outline-offset: 2px` — keyboard focus indicator; `input` covers all types, not just text-like               |
 
 ---
 
