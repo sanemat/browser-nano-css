@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/sanemat/browser-nano-css.git"
   },
-  "license": "MIT",
+  "license": "MIT-0",
   "author": "Matt Murahashi Kenichi",
   "main": "dist/browser-nano.min.css",
   "files": [
