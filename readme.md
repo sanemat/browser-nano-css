@@ -51,6 +51,9 @@ Override any variable in your own stylesheet:
 :root {
   --accent: #0066cc;
 }
+a:visited {
+  color: #551a8b; /* match your theme */
+}
 ```
 
 ## What gets styled
