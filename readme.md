@@ -62,6 +62,7 @@ a:visited {
 - Structure: `main`, `article`, `nav`
 - Forms: `button`, `input` (text-like types), `select`, `textarea`, `label`, `fieldset`
 - Table: `overflow-x: auto` for mobile scroll
+- Focus: `:focus-visible` keyboard focus indicator using `--accent` — applies to all `<input>` types, not just text-like
 
 ## What does NOT get styled
 
