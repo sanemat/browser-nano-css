@@ -5,9 +5,3 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
-  - package-ecosystem: "npm"
-    directory: "/"
-    target-branch: "v2"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
