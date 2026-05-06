@@ -103,6 +103,7 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 - Line-height: `1.6` — readable on mobile
 - Font-weight: browser defaults only — we do not override `bold`
 - `h4`/`h5`/`h6` floored at `1em` — smaller than body text breaks mobile readability
+- `overflow-wrap: break-word` on `body` — long URLs and words do not cause horizontal scroll on mobile
 
 ---
 
