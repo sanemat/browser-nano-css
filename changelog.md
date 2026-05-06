@@ -1,3 +1,9 @@
+# [2.2.0](https://github.com/sanemat/browser-nano-css/compare/v2.1.1...v2.2.0) (2026-05-06)
+
+### Features
+
+- prevent long text overflow on mobile ([de58d10](https://github.com/sanemat/browser-nano-css/commit/de58d104004c2f620e6ded4159633d786841b0bc)), closes [#188](https://github.com/sanemat/browser-nano-css/issues/188)
+
 ## [2.1.1](https://github.com/sanemat/browser-nano-css/compare/v2.1.0...v2.1.1) (2026-05-06)
 
 ### Chores
