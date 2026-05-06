@@ -5,7 +5,7 @@
 - `npm test` - Format check + HTML validation (primary test)
 - `npm run format` - Auto-fix formatting (run after editing CSS or HTML)
 - `npm run build` - Clean, process CSS, checksums, size check
-- `npm run size:check` - Verify under 2KB gzipped
+- `npm run size:check` - Verify under 999 bytes gzipped
 - `npm run changelog` - Generate changelog (conventional commits)
 - `npm run git:tag` - Create git tag from package.json version
 
