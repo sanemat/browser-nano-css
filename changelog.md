@@ -2,7 +2,7 @@
 
 ### Features
 
-- **focus:** `:focus-visible` outline using `var(--accent)` — keyboard navigation visible, mouse unaffected ([#180](https://github.com/sanemat/browser-nano-css/issues/180))
+- **focus:** `:focus-visible` outline using `var(--accent)` — keyboard focus indicator ([#180](https://github.com/sanemat/browser-nano-css/issues/180))
 
 # [2.0.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0-beta.8...v2.0.0) (2026-05-06)
 
