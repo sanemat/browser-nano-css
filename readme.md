@@ -39,7 +39,7 @@ npm install browser-nano-css
 :root {
   --bg: light-dark(#fff, #000);
   --text: light-dark(#000, #fff);
-  --accent: var(--text);
+  --accent: light-dark(#0645d2, #8ab4f8);
   --font-size-base: 18px;
   --max-width: 65ch;
 }
