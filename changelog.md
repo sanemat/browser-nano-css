@@ -1,3 +1,9 @@
+# Unreleased
+
+### Chores
+
+- change license from MIT to MIT-0 (no attribution required)
+
 # [2.1.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0...v2.1.0) (2026-05-06)
 
 ### Bug Fixes
