@@ -76,7 +76,7 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 | --------------------- | ---------------------------------------------------------------------------------------------------- |
 | `<h1>`–`<h6>`         | Size scale. `h4`/`h5`/`h6` floored at `1em`. `margin-block: 1.5rem 0.5rem`. Weight: browser default. |
 | `<p>`, `<ul>`, `<ol>` | `margin-block-end: 1rem`. `line-height` inherited from `body`.                                       |
-| `<a>`                 | Underline. Color: `var(--accent)`                                                                    |
+| `<a>`                 | Underline. Color: `var(--accent)`. Visited: purple (hardcoded, see CSS Variables)                    |
 | `<code>`, `<pre>`     | Monospace, readable, no overflow                                                                     |
 | `<blockquote>`        | Left border, spacing                                                                                 |
 
