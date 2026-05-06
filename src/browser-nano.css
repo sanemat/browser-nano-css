@@ -103,6 +103,21 @@ button {
   padding: 0.75rem 1.5rem;
 }
 
+input:is(
+  :not([type]),
+  [type="text"],
+  [type="email"],
+  [type="password"],
+  [type="search"],
+  [type="url"],
+  [type="tel"],
+  [type="number"],
+  [type="date"],
+  [type="time"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"]
+),
 select,
 textarea {
   background: var(--bg);
