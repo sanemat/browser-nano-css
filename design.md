@@ -20,6 +20,7 @@ Correct HTML is rewarded with good defaults. No classes needed.
 - Respect `prefers-color-scheme` automatically
 - Style key semantic HTML elements
 - Style mobile form UI elements
+- Visible focus indicator for keyboard navigation (`:focus-visible`)
 
 ## What we do NOT do
 
@@ -91,6 +92,7 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 | `<fieldset>`                        | Grouping, border                                                                                                                               |
 | `<table>`                           | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
 | Checkboxes, radios, range, progress | `accent-color: var(--accent)` on `:root` — no per-element rule needed                                                                          |
+| `:focus-visible`                    | `outline: 2px solid var(--accent); outline-offset: 2px` — keyboard focus visible, mouse unaffected                                             |
 
 ---
 
