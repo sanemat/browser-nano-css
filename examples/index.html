@@ -3,65 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browser Nano CSS — Modern Template</title>
+    <title>Browser Nano CSS v2</title>
     <link rel="stylesheet" href="/dist/browser-nano.min.css" />
     <link rel="stylesheet" href="/examples/style.css" />
     <meta
       name="description"
-      content="A modern, semantic, mobile-first HTML5 template styled with browser-nano-css."
+      content="Write correct HTML. Get a usable, readable screen on mobile. Under 999 bytes."
     />
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
-    <header style="text-align: center">
-      <h1 id="welcome">Welcome to Browser Nano CSS</h1>
-      <p>A minimal, semantic HTML template powered by a 2KB CSS framework.</p>
+    <header>
+      <h1>Browser Nano CSS v2</h1>
+      <p>
+        Write correct HTML. Get a usable, readable screen on mobile. Handle your
+        own layout. Under 999 bytes.
+      </p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#structure">Structure</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#table">Table</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main id="main" class="container" role="main">
-      <section aria-labelledby="features">
-        <h2 id="features">Core Features</h2>
-        <article>
-          <h3>Mobile-First Design</h3>
-          <p>
-            This template is optimized for smartphones and tablets first, then
-            gracefully scales up.
-          </p>
-        </article>
-        <article>
-          <h3>Semantic HTML</h3>
-          <p>
-            We use meaningful elements like <code>&lt;section&gt;</code>,
-            <code>&lt;article&gt;</code>, and <code>&lt;nav&gt;</code> to
-            improve structure and accessibility.
-          </p>
-        </article>
-        <article>
-          <h3>Customizable with CSS Variables</h3>
-          <p>
-            Change colors, spacing, and fonts via variables like
-            <code>--color-primary</code>.
-          </p>
-        </article>
-        <article>
-          <h3>Accessibility Features</h3>
-          <p>
-            Built-in support for screen readers, keyboard navigation, and touch
-            targets.
-            <span class="visually-hidden"
-              >This text is hidden visually but available to screen
-              readers.</span
-            >
-          </p>
-          <p>
-            <a href="#contact" class="tap-target">Large tap target link</a> for
-            better mobile experience.
-          </p>
-        </article>
+    <main>
+      <section id="typography">
+        <h2>Typography</h2>
+
+        <p><code>h1</code> is used as the page title above.</p>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p>
+          This is a paragraph. Base font size is 18px for mobile readability.
+          Line height is 1.6. Links look like <a href="#">this</a>. Inline code
+          looks like <code>var(--accent)</code>.
+        </p>
+
+        <ul>
+          <li>Unordered list item one</li>
+          <li>Unordered list item two</li>
+          <li>Unordered list item three</li>
+        </ul>
+
+        <ol>
+          <li>Ordered list item one</li>
+          <li>Ordered list item two</li>
+          <li>Ordered list item three</li>
+        </ol>
+
+        <blockquote>
+          Write correct HTML. Get a usable, readable screen on mobile. Handle
+          your own layout. Under 999 bytes.
+        </blockquote>
+
+        <pre><code>:root {
+  --bg: #fff;
+  --text: #000;
+  --accent: light-dark(#0645d2, #8ab4f8);
+  --font-size-base: 18px;
+  --max-width: 65ch;
+}</code></pre>
       </section>
 
-      <section>
-        <h2>Image Preview</h2>
+      <section id="structure">
+        <h2>Structure</h2>
+        <article>
+          <h3>Article</h3>
+          <p>
+            This <code>&lt;article&gt;</code> has
+            <code>max-width: var(--max-width)</code>. The
+            <code>&lt;main&gt;</code> element is centered with
+            <code>margin-inline: auto</code> and the same max-width.
+          </p>
+        </article>
+
         <figure>
           <img
             src="/examples/2499674-607d8b.svg"
@@ -73,28 +94,13 @@
         </figure>
       </section>
 
-      <section>
-        <h2>Navigation Example</h2>
-        <nav aria-label="Main navigation">
-          <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <p>
-          Notice how the navigation list removes bullets and indentation
-          automatically.
-        </p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Us</h2>
+      <section id="forms">
+        <h2>Forms</h2>
         <form method="POST" action="#">
           <fieldset>
-            <legend>Contact Form</legend>
+            <legend>Contact</legend>
 
-            <label for="name">Your Name</label>
+            <label for="name">Name</label>
             <input
               id="name"
               name="name"
@@ -103,7 +109,7 @@
               placeholder="Jane Doe"
             />
 
-            <label for="email">Email Address</label>
+            <label for="email">Email</label>
             <input
               id="email"
               name="email"
@@ -112,119 +118,13 @@
               placeholder="jane@example.com"
             />
 
-            <label for="phone">Phone Number</label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="+1-555-123-4567"
-            />
-
-            <label for="website">Website</label>
-            <input
-              id="website"
-              name="website"
-              type="url"
-              placeholder="https://example.com"
-            />
-
-            <label for="age">Age</label>
-            <input
-              id="age"
-              name="age"
-              type="number"
-              min="1"
-              max="120"
-              placeholder="25"
-            />
-
-            <label for="birthdate">Birth Date</label>
-            <input id="birthdate" name="birthdate" type="date" />
-
-            <label for="appointment_time">Appointment Time</label>
-            <input id="appointment_time" name="appointment_time" type="time" />
-
-            <label for="meeting_datetime">Meeting Date & Time</label>
-            <input
-              id="meeting_datetime"
-              name="meeting_datetime"
-              type="datetime-local"
-            />
-
             <label for="country">Country</label>
             <select id="country" name="country" required>
-              <option value="">Select your country</option>
+              <option value="">Select a country</option>
               <option value="jp">Japan</option>
               <option value="us">United States</option>
               <option value="uk">United Kingdom</option>
-              <option value="ca">Canada</option>
-              <option value="au">Australia</option>
             </select>
-
-            <fieldset>
-              <legend>Preferred Contact Method</legend>
-              <label>
-                <input
-                  type="radio"
-                  name="contact_method"
-                  value="email"
-                  required
-                />
-                Email
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="contact_method"
-                  value="phone"
-                  required
-                />
-                Phone
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="contact_method"
-                  value="mail"
-                  required
-                />
-                Postal Mail
-              </label>
-            </fieldset>
-
-            <label for="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              placeholder="Enter your password"
-            />
-
-            <label for="confirm_password">Confirm Password</label>
-            <input
-              id="confirm_password"
-              name="confirm_password"
-              type="password"
-              required
-              placeholder="Confirm your password"
-            />
-
-            <fieldset>
-              <legend>Subscription Preferences</legend>
-              <label>
-                <input type="checkbox" name="newsletter" value="newsletter" />
-                Subscribe to newsletter
-              </label>
-              <label>
-                <input type="checkbox" name="updates" value="updates" />
-                Receive product updates
-              </label>
-              <label>
-                <input type="checkbox" name="terms" value="terms" required />
-                I agree to the terms and conditions
-              </label>
-            </fieldset>
 
             <label for="message">Message</label>
             <textarea
@@ -235,20 +135,13 @@
             ></textarea>
 
             <button type="submit">Send</button>
-            <small
-              >Tip: Use Tab to navigate through form fields and see focus
-              indicators.</small
-            >
           </fieldset>
         </form>
       </section>
 
-      <section>
-        <h2>Data Table Example</h2>
+      <section id="table">
+        <h2>Table</h2>
         <table>
-          <caption>
-            User Account Information
-          </caption>
           <thead>
             <tr>
               <th>Name</th>
@@ -259,14 +152,14 @@
           </thead>
           <tbody>
             <tr>
-              <td>John Smith</td>
-              <td>john@example.com</td>
+              <td>Jane Doe</td>
+              <td>jane@example.com</td>
               <td>Admin</td>
               <td>Active</td>
             </tr>
             <tr>
-              <td>Jane Doe</td>
-              <td>jane@example.com</td>
+              <td>John Smith</td>
+              <td>john@example.com</td>
               <td>User</td>
               <td>Active</td>
             </tr>
@@ -278,24 +171,19 @@
             </tr>
           </tbody>
         </table>
-        <p>
-          This table demonstrates responsive layout and accessibility features.
-        </p>
       </section>
     </main>
 
-    <footer style="text-align: center">
-      <nav>
-        <ul class="flex" aria-label="Footer navigation">
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <footer>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#structure">Structure</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#table">Table</a></li>
         </ul>
       </nav>
-      <small
-        >&copy; 2025 Browser Nano. Built with minimal CSS for maximum
-        clarity.</small
-      >
+      <small>&copy; 2025 Browser Nano CSS</small>
     </footer>
   </body>
 </html>

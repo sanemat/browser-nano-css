@@ -1,56 +1,86 @@
 # Browser Nano CSS
 
-## About
+> Write correct HTML. Get a usable, readable screen on mobile. Handle your own layout. Under 999 bytes.
 
-🚧 This project is still in development. For now, you can try [Pico CSS](https://picocss.com/) or [MVP.css](https://andybrewer.github.io/mvp/). 🚧
-
-Browser Nano CSS is a lightweight, mobile-first CSS template. It provides simple and clean styles for default HTML elements without requiring extra classes or setup.
+A lightweight, classless CSS file. Style semantic HTML elements directly — no utility classes, no setup.
 
 ## Features
 
-- **Minimal and fast** – Small file size for quick loading.
-- **No dependencies** – Works with just a single CSS file.
-- **Customizable** – Uses CSS variables for easy styling.
-- **Modern browser support** – Works in Chrome, Safari, Firefox, and mobile browsers.
+- **Classless** — no classes required, correct HTML is rewarded
+- **Mobile-first** — 18px base font, readable line length, touch-friendly controls
+- **Dark mode** — automatic via `prefers-color-scheme`, no opt-in needed
+- **Tiny** — under 999 bytes gzipped
+- **Customizable** — five CSS variables, nothing more
 
 ## Installation
 
-### **Using a CDN**
-
-Add this line to your HTML to use Browser Nano CSS:
+### CDN
 
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/browser-nano-css/dist/browser-nano.min.css"
+  href="https://unpkg.com/browser-nano-css@2/dist/browser-nano.min.css"
 />
 ```
 
-### **Using npm**
-
-Install with:
+### npm
 
 ```sh
 npm install browser-nano-css
 ```
 
-Then import it in your project:
-
 ```css
 @import "browser-nano-css/dist/browser-nano.min.css";
 ```
 
-## ❌ Not Compatible with CSS Optimization Tools
+## CSS Variables
 
-Browser Nano CSS applies styles directly to HTML elements (e.g., `button {}` instead of `.btn {}`).
-Because of this, tools like **PurgeCSS or CSS tree-shaking may remove important styles** if used without proper configuration.
+```css
+:root {
+  --bg: light-dark(#fff, #000);
+  --text: light-dark(#000, #fff);
+  --accent: light-dark(#0645d2, #8ab4f8);
+  --font-size-base: 18px;
+  --max-width: 65ch;
+}
+```
 
-📌 **Recommendation:** Include the full CSS file without using PurgeCSS or similar optimization tools. If you need tree-shaking support, consider another framework that relies on utility classes.
+Override any variable in your own stylesheet:
+
+```css
+:root {
+  --accent: #0066cc;
+}
+a:visited {
+  color: #551a8b; /* match your theme */
+}
+```
+
+## What gets styled
+
+- Typography: `h1`–`h6`, `p`, `ul`, `ol`, `a`, `code`, `pre`, `blockquote`
+- Structure: `main`, `article`, `nav`
+- Forms: `button`, `input` (text-like types), `select`, `textarea`, `label`, `fieldset`
+- Table: `overflow-x: auto` for mobile scroll
+
+## What does NOT get styled
+
+- `header`, `footer`, `aside` — handle your own layout
+- No utility classes — not even `.visually-hidden`
+- No component patterns — no modal, card, dropdown
+
+## Migration from v1
+
+v2 is a clean breaking change. Remove any utility classes (`.flex`, `.container`, `.visually-hidden`, etc.) from your HTML. Write semantic elements instead. That is the entire migration.
+
+## Not compatible with CSS purging tools
+
+Styles apply directly to HTML elements (`button {}`, not `.btn {}`). PurgeCSS and similar tools will remove needed styles. Include the full CSS file without purging.
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
 
 ## Design
 
-[design doc](./design.md)
+[design.md](./design.md)

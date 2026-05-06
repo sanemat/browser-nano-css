@@ -1,6 +1,6 @@
 {
   "name": "browser-nano-css",
-  "version": "0.6.2",
+  "version": "2.0.0-beta.8",
   "description": "CSS template",
   "homepage": "https://github.com/sanemat/browser-nano-css#readme",
   "bugs": {
@@ -34,6 +34,7 @@
     "format": "npm run prettier && npm run sort-package-json",
     "format:check": "npm run prettier:check && npm run sort-package-json:check",
     "git:tag": "git tag v$(node -p \"require('./package.json').version\")",
+    "html-validate": "html-validate examples/**/*.html",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "process-css": "postcss src/browser-nano.css -o dist/browser-nano.min.css --map",
@@ -42,7 +43,7 @@
     "size:check": "node tools/size.js check",
     "sort-package-json": "sort-package-json",
     "sort-package-json:check": "sort-package-json --check",
-    "test": "npm run format:check",
+    "test": "npm run format:check && npm run html-validate",
     "watch": "postcss src/browser-nano.css -o dist/browser-nano.min.css --watch"
   },
   "devDependencies": {
@@ -50,6 +51,7 @@
     "conventional-changelog-cli": "^5.0.0",
     "cssnano": "^7.0.6",
     "del-cli": "^6.0.0",
+    "html-validate": "^10.15.0",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3",
     "serve": "^14.2.4",
