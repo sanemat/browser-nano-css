@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --bg: light-dark(#fff, #000);
   --text: light-dark(#000, #fff);
-  --accent: var(--text);
+  --accent: light-dark(#0645d2, #8ab4f8);
   --font-size-base: 18px;
   --max-width: 65ch;
   accent-color: var(--accent);
@@ -59,6 +59,10 @@ ol {
 a {
   color: var(--accent);
   text-decoration: underline;
+}
+
+a:visited {
+  color: light-dark(#551a8b, #c58af9);
 }
 
 code,
