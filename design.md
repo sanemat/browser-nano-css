@@ -72,13 +72,13 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 
 ### Typography
 
-| Element               | What we do                                                                                      |
-| --------------------- | ----------------------------------------------------------------------------------------------- |
-| `<h1>`–`<h6>`         | Size scale. `h5`/`h6` floored at `1em`. `margin-block: 1.5rem 0.5rem`. Weight: browser default. |
-| `<p>`, `<ul>`, `<ol>` | `margin-block-end: 1rem`. `line-height` inherited from `body`.                                  |
-| `<a>`                 | Underline. Color: `var(--accent)`                                                               |
-| `<code>`, `<pre>`     | Monospace, readable, no overflow                                                                |
-| `<blockquote>`        | Left border, spacing                                                                            |
+| Element               | What we do                                                                                           |
+| --------------------- | ---------------------------------------------------------------------------------------------------- |
+| `<h1>`–`<h6>`         | Size scale. `h4`/`h5`/`h6` floored at `1em`. `margin-block: 1.5rem 0.5rem`. Weight: browser default. |
+| `<p>`, `<ul>`, `<ol>` | `margin-block-end: 1rem`. `line-height` inherited from `body`.                                       |
+| `<a>`                 | Underline. Color: `var(--accent)`                                                                    |
+| `<code>`, `<pre>`     | Monospace, readable, no overflow                                                                     |
+| `<blockquote>`        | Left border, spacing                                                                                 |
 
 ### App UI
 
@@ -99,7 +99,7 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 - Base font-size: `18px` — 16px is too small on mobile
 - Line-height: `1.6` — readable on mobile
 - Font-weight: browser defaults only — we do not override `bold`
-- `h5`/`h6` floored at `1em` — smaller than body text breaks mobile readability
+- `h4`/`h5`/`h6` floored at `1em` — smaller than body text breaks mobile readability
 
 ---
 
