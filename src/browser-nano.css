@@ -111,12 +111,7 @@ input:is(
   [type="search"],
   [type="url"],
   [type="tel"],
-  [type="number"],
-  [type="date"],
-  [type="time"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="week"]
+  [type="number"]
 ),
 select,
 textarea {
