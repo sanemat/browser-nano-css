@@ -28,7 +28,7 @@
         </ul>
       </nav>
       <p class="note">
-        Page layout (flex nav, padding) uses
+        Header and footer padding, and the flex nav layout, come from
         <a href="/examples/style.css">style.css</a>. That CSS is not part of
         browser-nano-css.
       </p>
@@ -181,10 +181,11 @@
       <section id="custom-layout">
         <h2>Layout: bring your own CSS</h2>
         <p>
-          browser-nano-css does not do layout. The navigation above is a plain
+          browser-nano-css does not provide flex or positioning for nav layout.
+          The navigation above is a plain
           <code>&lt;nav&gt;&lt;ul&gt;</code> — browser-nano-css adds minimal
-          spacing only, no flex, no positioning. The horizontal flex layout
-          comes from <a href="/examples/style.css">style.css</a>:
+          spacing only. The horizontal flex layout comes from
+          <a href="/examples/style.css">style.css</a> (simplified example):
         </p>
         <pre><code>/* Your CSS — not part of browser-nano-css */
 nav ul {
