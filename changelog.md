@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0-beta.8...v2.0.0) (2026-05-06)
+
+### Features
+
+- **dark mode:** automatic via `light-dark()` and `color-scheme: light dark` — no `@media` block needed ([#167](https://github.com/sanemat/browser-nano-css/issues/167))
+- **accent:** `--accent` defaults to blue `light-dark(#0645d2, #8ab4f8)` — WCAG AAA contrast in both modes ([#173](https://github.com/sanemat/browser-nano-css/issues/173))
+- **links:** add `a:visited` rule with hardcoded purple `light-dark(#551a8b, #c58af9)` ([#173](https://github.com/sanemat/browser-nano-css/issues/173))
+- **input:** allowlist for keyboard text-entry types (`text`, `email`, `password`, `search`, `url`, `tel`, `number`) ([#175](https://github.com/sanemat/browser-nano-css/issues/175))
+- **forms:** `font: inherit` reset for `button`, `input`, `select`, `textarea`
+- **forms:** `accent-color: var(--accent)` on `:root` — checkbox/radio/range styled natively
+- **headings:** `:where()` for heading margins — specificity 0, easy to override
+- **headings:** `h4`/`h5`/`h6` floored at `1em`
+- **blockquote:** `margin-inline: 0` removes asymmetric UA margins
+- **table:** `display: block; overflow-x: auto` for mobile scroll
+
+### BREAKING CHANGES
+
+- Complete CSS rewrite from v1 — all utility classes removed (`.flex`, `.container`, `.visually-hidden`, etc.)
+- v1 design tokens removed; replaced with 5 CSS variables: `--bg`, `--text`, `--accent`, `--font-size-base`, `--max-width`
+- No `@media (prefers-color-scheme: dark)` block — dark mode is now automatic
+
 ## [0.6.2](https://github.com/sanemat/browser-nano-css/compare/v0.6.1...v0.6.2) (2025-03-31)
 
 ### Bug Fixes
