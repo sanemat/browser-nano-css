@@ -1,8 +1,13 @@
-# [Unreleased]
+# [2.1.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0...v2.1.0) (2026-05-06)
+
+### Bug Fixes
+
+- address review feedback on focus-visible PR ([32069c8](https://github.com/sanemat/browser-nano-css/commit/32069c85d640173e0cc56b95bc7c0bd330d1557e))
+- use :where() for zero-specificity focus rule, fix docs ([a3f5429](https://github.com/sanemat/browser-nano-css/commit/a3f5429a3ec6ec8a4b72d7a2af70a3847854b53e))
 
 ### Features
 
-- **focus:** `:focus-visible` outline using `var(--accent)` — keyboard focus indicator ([#180](https://github.com/sanemat/browser-nano-css/issues/180))
+- add :focus-visible outline using --accent ([e7b657c](https://github.com/sanemat/browser-nano-css/commit/e7b657c5783c7a6a1509506814dd3cb2f261f7f1)), closes [#180](https://github.com/sanemat/browser-nano-css/issues/180)
 
 # [2.0.0](https://github.com/sanemat/browser-nano-css/compare/v2.0.0-beta.8...v2.0.0) (2026-05-06)
 
