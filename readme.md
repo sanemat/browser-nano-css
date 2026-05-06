@@ -60,7 +60,7 @@ a:visited {
 
 - Typography: `h1`–`h6`, `p`, `ul`, `ol`, `a`, `code`, `pre`, `blockquote`
 - Structure: `main`, `article`, `nav`
-- Forms: `button`, `select`, `textarea`, `label`, `fieldset`
+- Forms: `button`, `input` (text-like types), `select`, `textarea`, `label`, `fieldset`
 - Table: `overflow-x: auto` for mobile scroll
 
 ## What does NOT get styled

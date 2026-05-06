@@ -85,7 +85,8 @@ Dark mode swaps `--bg` and `--text` via `light-dark()`. `--accent` uses blue in 
 | Element                             | What we do                                                                                                                                     |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<button>`                          | Touch-friendly padding, high contrast, cursor. `font: inherit` via reset.                                                                      |
-| `<select>`, `<textarea>`            | `width: 100%`, border. `font: inherit` via reset.                                                                                              |
+| `<input>` (text-like types)         | `width: 100%`, border, theme colors. Types: `text`, `email`, `password`, `search`, `url`, `tel`, `number`, no-type. `font: inherit` via reset. |
+| `<select>`, `<textarea>`            | `width: 100%`, border, theme colors. `font: inherit` via reset.                                                                                |
 | `<label>`                           | Display block, tap target                                                                                                                      |
 | `<fieldset>`                        | Grouping, border                                                                                                                               |
 | `<table>`                           | `display: block; overflow-x: auto` — `display: block` is required for `overflow-x` to work on table elements; row/cell formatting is preserved |
