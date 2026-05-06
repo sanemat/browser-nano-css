@@ -13,7 +13,7 @@
 - **blockquote:** `margin-inline: 0` removes asymmetric UA margins
 - **table:** `display: block; overflow-x: auto` for mobile scroll
 
-### BREAKING CHANGES
+### Breaking Changes
 
 - Complete CSS rewrite from v1 — all utility classes removed (`.flex`, `.container`, `.visually-hidden`, etc.)
 - v1 design tokens removed; replaced with 5 CSS variables: `--bg`, `--text`, `--accent`, `--font-size-base`, `--max-width`
