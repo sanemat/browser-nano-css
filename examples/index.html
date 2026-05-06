@@ -24,8 +24,14 @@
           <li><a href="#structure">Structure</a></li>
           <li><a href="#forms">Forms</a></li>
           <li><a href="#table">Table</a></li>
+          <li><a href="#custom-layout">Layout</a></li>
         </ul>
       </nav>
+      <p class="note">
+        Page layout (flex nav, padding) uses
+        <a href="/examples/style.css">style.css</a>. That CSS is not part of
+        browser-nano-css.
+      </p>
     </header>
 
     <main>
@@ -172,6 +178,32 @@
           </tbody>
         </table>
       </section>
+      <section id="custom-layout">
+        <h2>Layout: bring your own CSS</h2>
+        <p>
+          browser-nano-css does not do layout. The navigation above is a plain
+          <code>&lt;nav&gt;&lt;ul&gt;</code> — browser-nano-css leaves it
+          unstyled. The horizontal flex layout comes from
+          <a href="/examples/style.css">style.css</a>:
+        </p>
+        <pre><code>/* Your CSS — not part of browser-nano-css */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}</code></pre>
+        <p>Without that extra CSS, the same nav looks like this:</p>
+        <nav aria-label="Raw nav example">
+          <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#table">Table</a></li>
+          </ul>
+        </nav>
+      </section>
     </main>
 
     <footer>
@@ -181,6 +213,7 @@
           <li><a href="#structure">Structure</a></li>
           <li><a href="#forms">Forms</a></li>
           <li><a href="#table">Table</a></li>
+          <li><a href="#custom-layout">Layout</a></li>
         </ul>
       </nav>
       <small>&copy; 2025 Browser Nano CSS</small>
