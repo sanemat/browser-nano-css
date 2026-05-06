@@ -11,6 +11,13 @@
 
 ## Constraints
 
-- **999 bytes gzipped limit** — build fails if exceeded
+- **999 bytes gzipped limit** — build fails if exceeded; if we exceed it, cut features, never raise the limit
 - Element-based selectors only (no utility classes); not compatible with CSS purging tools
 - Standard CSS only; targets Chrome, Safari, Firefox
+
+## Philosophy
+
+> Write correct HTML. Get a usable, readable screen on mobile. Handle your own layout. Under 999 bytes.
+
+"Trust the browser" — only for properties we have not touched. Once we declare a property, we own all consequences.
+CSS additions must justify their bytes. See `design.md` for full rationale.
